@@ -80,10 +80,11 @@ export const LandingPage: React.FC = () => {
       >
         <div className="container mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
           <div className="flex items-center gap-4 group cursor-pointer" onClick={() => window.scrollTo(0, 0)}>
-            {/* Logo box dengan efek glow saat di-hover */}
-            <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-accent to-accent-hover rounded-xl flex items-center justify-center text-surface-darkest font-black shadow-lg shadow-accent/20 group-hover:shadow-accent/40 group-hover:-rotate-3 transition-all duration-300">
-              SSD
-            </div>
+            <img
+              src="/logo/transparent-no-char.png"
+              alt="SSD Mobility"
+              className="h-10 md:h-12 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
+            />
             <div className="flex flex-col">
               <span className="text-surface-white font-black font-heading text-lg md:text-xl tracking-tight leading-none group-hover:text-accent transition-colors duration-300">MOBILITY</span>
               <span className="text-content-light/60 text-[9px] md:text-[10px] font-bold tracking-[0.3em] leading-none mt-1.5">BY SINERGI SATU DAYA</span>
