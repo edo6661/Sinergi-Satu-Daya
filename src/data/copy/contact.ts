@@ -48,7 +48,7 @@ export const contactCopy = {
         commercial: "Kendaraan Niaga (Van/Kargo)",
         custom: "Custom / Konsultasi Dulu",
       },
-      submit: "Kirim Permintaan Penawaran",
+      submit: "Daftar Sekarang",
     },
   },
   en: {
@@ -98,7 +98,7 @@ export const contactCopy = {
         commercial: "Commercial Vehicle (Van/Cargo)",
         custom: "Custom / Need Consultation First",
       },
-      submit: "Send Quote Request",
+      submit: "Register Now",
     },
   },
 } as const;

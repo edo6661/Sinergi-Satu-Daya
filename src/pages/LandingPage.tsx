@@ -99,7 +99,7 @@ export const LandingPage: React.FC = () => {
               <span className={lang === 'en' ? 'text-accent' : ''}>EN</span>
             </button>
             <button onClick={scrollToContact} className="relative items-center justify-center bg-white/5 hover:bg-accent text-surface-white hover:text-surface-darkest border border-white/10 hover:border-accent px-6 py-2.5 rounded-lg text-xs font-bold transition-all duration-300 overflow-hidden group animate-shimmer">
-              <span className="relative z-10">GET CONSULTATION</span>
+              <span className="relative z-10">HUBUNGI VIA WHATSAPP</span>
             </button>
           </div>
 
@@ -123,7 +123,7 @@ export const LandingPage: React.FC = () => {
               <span className={lang === 'en' ? 'text-accent' : 'text-content-muted'}>EN</span>
             </button>
             <button onClick={() => { scrollToContact(); toggleMobileMenu(); }} className="w-full bg-accent text-surface-darkest py-3 rounded-lg text-sm font-bold tracking-widest animate-shimmer">
-              GET CONSULTATION
+              HUBUNGI VIA WHATSAPP
             </button>
           </div>
         </div>
