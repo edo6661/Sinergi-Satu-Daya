@@ -99,7 +99,7 @@ export const LandingPage: React.FC = () => {
               <span className={lang === 'en' ? 'text-accent' : ''}>EN</span>
             </button>
             <button onClick={scrollToContact} className="relative items-center justify-center bg-white/5 hover:bg-accent text-surface-white hover:text-surface-darkest border border-white/10 hover:border-accent px-6 py-2.5 rounded-lg text-xs font-bold transition-all duration-300 overflow-hidden group animate-shimmer">
-              <span className="relative z-10">HUBUNGI VIA WHATSAPP</span>
+              <span className="relative z-10">{lang === 'id' ? 'HUBUNGI VIA WHATSAPP' : 'CONTACT VIA WHATSAPP'}</span>
             </button>
           </div>
 
@@ -117,13 +117,13 @@ export const LandingPage: React.FC = () => {
         <div className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out bg-surface-darkest/95 backdrop-blur-xl border-b border-white/10 ${isMobileMenuOpen ? 'max-h-48 opacity-100' : 'max-h-0 opacity-0 border-transparent'}`}>
           <div className="container mx-auto px-6 py-4 flex flex-col gap-4">
             <button onClick={toggleLanguage} className="w-full text-left py-2 text-sm font-bold text-content-light hover:text-accent transition-colors tracking-widest flex items-center gap-2">
-              <span>Language:</span>
+              <span>{lang === 'id' ? 'Bahasa:' : 'Language:'}</span>
               <span className={lang === 'id' ? 'text-accent' : 'text-content-muted'}>ID</span>
               <span className="text-white/20">/</span>
               <span className={lang === 'en' ? 'text-accent' : 'text-content-muted'}>EN</span>
             </button>
             <button onClick={() => { scrollToContact(); toggleMobileMenu(); }} className="w-full bg-accent text-surface-darkest py-3 rounded-lg text-sm font-bold tracking-widest animate-shimmer">
-              HUBUNGI VIA WHATSAPP
+              {lang === 'id' ? 'HUBUNGI VIA WHATSAPP' : 'CONTACT VIA WHATSAPP'}
             </button>
           </div>
         </div>
@@ -140,7 +140,7 @@ export const LandingPage: React.FC = () => {
             <span className="text-accent font-black text-xs">SSD</span>
           </div>
           <div className="text-content-light/70 font-bold tracking-[0.2em] text-xs uppercase animate-pulse">
-            Loading Ecosystem...
+            {lang === 'id' ? 'Memuat Ekosistem...' : 'Loading Ecosystem...'}
           </div>
         </div>
       }>
@@ -184,10 +184,12 @@ export const LandingPage: React.FC = () => {
 
               {/* Tautan Footer */}
               <div className="md:col-span-3 flex flex-col items-center md:items-start gap-4">
-                <h4 className="text-surface-white font-bold tracking-widest text-xs uppercase mb-2">Links</h4>
-                <a href="#" className="text-sm hover:text-accent transition-colors">Tentang Kami</a>
-                <a href="#" className="text-sm hover:text-accent transition-colors">Layanan Pemeliharaan</a>
-                <a href="#" className="text-sm hover:text-accent transition-colors">Galeri Proyek</a>
+                <h4 className="text-surface-white font-bold tracking-widest text-xs uppercase mb-2">
+                  {lang === 'id' ? 'Tautan' : 'Links'}
+                </h4>
+                <a href="#" className="text-sm hover:text-accent transition-colors">{lang === 'id' ? 'Tentang Kami' : 'About Us'}</a>
+                <a href="#" className="text-sm hover:text-accent transition-colors">{lang === 'id' ? 'Layanan Pemeliharaan' : 'Maintenance Services'}</a>
+                <a href="#" className="text-sm hover:text-accent transition-colors">{lang === 'id' ? 'Galeri Proyek' : 'Project Gallery'}</a>
               </div>
 
               {/* Form Daftar Pembaruan (Diambil dari web lama) */}
@@ -216,10 +218,10 @@ export const LandingPage: React.FC = () => {
             </div>
 
             <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] font-bold tracking-widest text-surface-white/40">
-              <span>© {new Date().getFullYear()} PT SINERGI SATU DAYA. ALL RIGHTS RESERVED.</span>
+              <span>© {new Date().getFullYear()} PT SINERGI SATU DAYA. {lang === 'id' ? 'HAK CIPTA DILINDUNGI.' : 'ALL RIGHTS RESERVED.'}</span>
               <span className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
-                ENGINEERED FOR EFFICIENCY
+                {lang === 'id' ? 'DIRANCANG UNTUK EFISIENSI' : 'ENGINEERED FOR EFFICIENCY'}
               </span>
             </div>
           </div>
