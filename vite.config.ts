@@ -11,7 +11,7 @@ export default defineConfig({
     react(),
     tailwindcss(),
     Sitemap({
-      hostname: "",
+      hostname: "https://www.sinergisatudaya.co.id",
       dynamicRoutes: dynamicRoutes,
       generateRobotsTxt: false,
     }),
