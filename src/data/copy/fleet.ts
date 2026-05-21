@@ -9,6 +9,7 @@ export const fleetCopy = {
       all: "Semua Armada",
       passenger: "Mobil Penumpang",
       commercial: "Kendaraan Niaga",
+      recreation: "Transportasi Rekreasi",
     },
   },
   en: {
@@ -21,12 +22,13 @@ export const fleetCopy = {
       all: "All Fleet",
       passenger: "Passenger Cars",
       commercial: "Commercial Vehicles",
+      recreation: "Recreational Transport",
     },
   },
 } as const;
 
 export type FleetLanguage = keyof typeof fleetCopy;
-export type FleetCategory = "all" | "passenger" | "commercial";
+export type FleetCategory = "all" | "passenger" | "commercial" | "recreation";
 export const fleetData = [
   {
     id: "ev-1",
@@ -48,5 +50,12 @@ export const fleetData = [
     category: "passenger",
     range: "410 km",
     image: "/cars/wuling-binguo-ev.jpg",
+  },
+  {
+    id: "ev-4",
+    name: "Wuling Air EV Lite",
+    category: "recreation",
+    range: "200 km",
+    image: "/cars/wuling-binguo-ev.jpg", // Pastikan gambar tersedia nanti
   },
 ];

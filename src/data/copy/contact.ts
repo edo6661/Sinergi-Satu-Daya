@@ -21,9 +21,9 @@ export const contactCopy = {
         {
           icon: Phone,
           title: "Hotline B2B",
-          desc: "+62 811-XXXX-XXXX (WhatsApp Available)",
+          desc: "+62 812 3456 7890",
         },
-        { icon: Mail, title: "Email", desc: "b2b@sinergisatudaya.co.id" },
+        { icon: Mail, title: "Email", desc: "support@sinergisatudaya.com" },
         {
           icon: Clock,
           title: "Jam Operasional",

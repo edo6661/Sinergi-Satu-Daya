@@ -15,7 +15,6 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
   const { lang } = useAppLanguage();
   const content = contactCopy[lang];
 
-  // State untuk form
   const [formData, setFormData] = useState<LeadFormData>({
     name: '',
     phone: '',
@@ -33,13 +32,9 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
   const handleSubmit = useCallback((e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-
-    if (onSubmit) {
-      onSubmit(formData);
-    }
+    if (onSubmit) onSubmit(formData);
 
     const waNumber = '628110000000';
-    // Gunakan \n biasa untuk enter
     const message = `Halo Tim SSD, saya ingin meminta penawaran dengan detail berikut:\n
 *Nama/Perusahaan:* ${formData.name}\n
 *No HP/WA:* ${formData.phone}\n
@@ -48,55 +43,55 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
 *Lokasi:* ${formData.location}\n
 \nMohon informasi lebih lanjut. Terima kasih.`;
 
-    // Lakukan encodeURIComponent untuk memastikan karakter spesial aman di URL parsing
     window.open(`https://wa.me/${waNumber}?text=${encodeURIComponent(message)}`, '_blank');
-
     setTimeout(() => {
       setFormData({ name: '', phone: '', vehicleType: '', unitCount: '', location: '' });
       setIsSubmitting(false);
     }, 1000);
   }, [formData, onSubmit]);
 
-  const inputClass = "w-full px-5 py-4 rounded-xl bg-surface-light border border-border-light focus:border-accent focus:bg-white focus:ring-4 focus:ring-accent/10 transition-all outline-none text-content-main font-medium placeholder:text-content-muted/50 shadow-sm";
+  const inputClass = "w-full px-5 py-3.5 rounded-xl bg-surface-light border border-border-light hover:border-primary/20 focus:border-accent focus:bg-white focus:ring-4 focus:ring-accent/5 transition-all duration-300 outline-none text-content-main text-sm font-semibold placeholder:text-content-muted/40 shadow-inner";
 
   return (
     <section className="py-24 bg-surface-light text-content-main relative">
       <div className="container mx-auto px-6 lg:px-12">
-        <div className="max-w-6xl mx-auto rounded-3xl overflow-hidden shadow-2xl flex flex-col lg:flex-row">
 
-          {/* Left Column: Contact Info */}
+        {/* Main Split Layout Panel */}
+        <div className="max-w-6xl mx-auto rounded-[2.5rem] overflow-hidden shadow-[0_30px_70px_rgba(0,0,0,0.07)] flex flex-col lg:flex-row border border-border-light/40 bg-white">
+
+          {/* Left Block: Corporate Info Details */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="lg:w-5/12 bg-surface-darkest text-content-inverse p-12 md:p-16 relative overflow-hidden flex flex-col justify-between"
+            className="lg:w-5/12 bg-surface-darkest text-content-inverse p-10 md:p-14 relative overflow-hidden flex flex-col justify-between"
           >
-            {/* Aksen Tech Glow */}
-            <div className="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 bg-accent/10 rounded-full blur-[100px]" />
-            <div className="absolute bottom-0 left-0 -ml-10 -mb-10 w-40 h-40 bg-electric/10 rounded-full blur-[60px]" />
+            {/* Tech Mesh Lighting Effects */}
+            <div className="absolute top-0 right-0 -mr-24 -mt-24 w-80 h-80 bg-accent/15 rounded-full blur-[90px] pointer-events-none" />
+            <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-64 h-64 bg-electric/10 rounded-full blur-[80px] pointer-events-none" />
 
             <div className="relative z-10">
-              <span className="text-accent font-black tracking-[0.2em] text-xs uppercase mb-6 block border-l-2 border-accent pl-4">
+              <span className="text-accent font-black tracking-[0.25em] text-[10px] uppercase mb-5 block border-l-2 border-accent pl-4 leading-none">
                 {content.info.tagline}
               </span>
-              <h2 className="text-4xl font-black font-heading mb-6 leading-tight tracking-tighter">
-                {content.info.heading.split(' ').map((word, i) => i === content.info.heading.split(' ').length - 1 ? <span key={i} className="text-accent">{word}</span> : word + ' ')}
+              <h2 className="text-3xl md:text-4xl font-black font-heading mb-6 leading-[1.2] tracking-tight">
+                {content.info.heading.split(' ').map((word, i) => i === content.info.heading.split(' ').length - 1 ? <span key={i} className="text-gradient-accent">{word}</span> : word + ' ')}
               </h2>
-              <p className="text-content-light/60 text-base leading-relaxed mb-12 max-w-sm">
+              <p className="text-content-light/70 text-sm leading-relaxed mb-12 max-w-sm font-medium">
                 {content.info.description}
               </p>
 
-              <div className="space-y-8">
+              <div className="space-y-6">
                 {content.info.details.map((detail, index) => {
                   const Icon = detail.icon;
                   return (
-                    <div key={index} className="flex items-start gap-5 group">
-                      <div className="mt-1 bg-white/5 p-3 rounded-xl border border-white/10 group-hover:border-accent/50 group-hover:bg-accent/10 transition-all duration-300">
-                        <Icon className="w-5 h-5 text-accent" />
+                    <div key={index} className="flex items-start gap-4 group">
+                      <div className="mt-0.5 bg-white/5 p-2.5 rounded-xl border border-white/10 group-hover:border-accent/40 group-hover:bg-accent/10 transition-all duration-300 shadow-inner">
+                        <Icon className="w-4 h-4 text-accent" />
                       </div>
                       <div>
-                        <h4 className="text-surface-white font-bold text-sm mb-1 tracking-tight">{detail.title}</h4>
-                        <p className="text-content-light/50 text-sm font-medium">{detail.desc}</p>
+                        <h4 className="text-surface-white font-bold text-sm tracking-tight mb-0.5">{detail.title}</h4>
+                        <p className="text-content-light/50 text-xs font-semibold leading-relaxed">{detail.desc}</p>
                       </div>
                     </div>
                   );
@@ -105,21 +100,21 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
             </div>
           </motion.div>
 
-          {/* Right Column: Lead Form */}
+          {/* Right Block: Interactive Lead Form */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="lg:w-7/12 bg-surface-white p-10 md:p-12"
+            className="lg:w-7/12 p-10 md:p-14 bg-white"
           >
-            <div className="mb-8">
-              <h3 className="text-2xl font-bold text-primary mb-2">{content.form.title}</h3>
-              <p className="text-content-muted text-sm">{content.form.subtitle}</p>
+            <div className="mb-10">
+              <h3 className="text-2xl md:text-3xl font-black text-primary mb-2 font-heading tracking-tight">{content.form.title}</h3>
+              <p className="text-content-muted text-sm font-medium">{content.form.subtitle}</p>
             </div>
 
             <form onSubmit={handleSubmit} className="space-y-5">
               <div>
-                <label className="block text-sm font-semibold text-content-main/80 mb-1.5">{content.form.fields.name}</label>
+                <label className="block text-[10px] font-black text-primary uppercase tracking-widest mb-2">{content.form.fields.name}</label>
                 <input
                   type="text"
                   name="name"
@@ -133,7 +128,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                 <div>
-                  <label className="block text-sm font-semibold text-content-main/80 mb-1.5">{content.form.fields.phone}</label>
+                  <label className="block text-[10px] font-black text-primary uppercase tracking-widest mb-2">{content.form.fields.phone}</label>
                   <input
                     type="tel"
                     name="phone"
@@ -145,7 +140,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-semibold text-content-main/80 mb-1.5">{content.form.fields.unitCount}</label>
+                  <label className="block text-[10px] font-black text-primary uppercase tracking-widest mb-2">{content.form.fields.unitCount}</label>
                   <input
                     type="number"
                     name="unitCount"
@@ -160,7 +155,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
               </div>
 
               <div>
-                <label className="block text-sm font-semibold text-content-main/80 mb-1.5">{content.form.fields.vehicleType}</label>
+                <label className="block text-[10px] font-black text-primary uppercase tracking-widest mb-2">{content.form.fields.vehicleType}</label>
                 <select
                   name="vehicleType"
                   required
@@ -176,7 +171,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
               </div>
 
               <div>
-                <label className="block text-sm font-semibold text-content-main/80 mb-1.5">{content.form.fields.location}</label>
+                <label className="block text-[10px] font-black text-primary uppercase tracking-widest mb-2">{content.form.fields.location}</label>
                 <input
                   type="text"
                   name="location"
@@ -190,14 +185,15 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
 
               <button
                 type="submit"
-                disabled={isSubmitting} // Disable saat loading
-                className={`w-full mt-4 flex items-center justify-center gap-2 px-8 py-4 rounded-lg font-bold transition-all transform shadow-lg ${isSubmitting
-                  ? 'bg-border-light text-content-muted cursor-not-allowed shadow-none'
-                  : 'bg-accent hover:bg-accent-hover text-content-main hover:-translate-y-0.5 shadow-accent/30'
+                disabled={isSubmitting}
+                className={`w-full mt-4 group flex items-center justify-center gap-2.5 px-8 py-4.5 rounded-xl font-bold uppercase tracking-widest text-xs transition-all duration-300 overflow-hidden relative border border-transparent cursor-pointer ${isSubmitting
+                    ? 'bg-surface-light text-content-muted cursor-not-allowed border-border-light'
+                    : 'bg-primary hover:bg-primary-hover text-surface-white shadow-[0_12px_30px_rgba(30,41,59,0.18)] hover:-translate-y-0.5'
                   }`}
               >
-                <Send className={`w-5 h-5 ${isSubmitting ? 'animate-pulse' : ''}`} />
-                {isSubmitting ? (lang === 'id' ? 'Memproses...' : 'Processing...') : content.form.submit}
+                {!isSubmitting && <div className="absolute inset-0 bg-white/10 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />}
+                <Send className={`w-4 h-4 relative z-10 ${isSubmitting ? 'animate-pulse text-content-muted' : 'group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform text-accent'}`} />
+                <span className="relative z-10">{isSubmitting ? (lang === 'id' ? 'Memproses...' : 'Processing...') : content.form.submit}</span>
               </button>
             </form>
           </motion.div>

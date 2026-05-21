@@ -1,4 +1,10 @@
-import { TrendingDown, Layers, ShieldAlert, Leaf } from "lucide-react";
+import {
+  TrendingDown,
+  Layers,
+  ShieldAlert,
+  Leaf,
+  CarFront,
+} from "lucide-react";
 
 export const benefitsCopy = {
   id: {
@@ -30,6 +36,12 @@ export const benefitsCopy = {
           "Jadikan perusahaan Anda pelopor industri hijau dengan mobilitas tanpa emisi karbon.",
         icon: Leaf,
       },
+      {
+        title: "Sewa & Jual Beli Kendaraan",
+        description:
+          "Menawarkan berbagai jenis kendaraan listrik untuk dibeli maupun disewa dengan harga terjangkau sesuai kebutuhan operasional bisnis Anda.",
+        icon: CarFront,
+      },
     ],
   },
   en: {
@@ -60,6 +72,12 @@ export const benefitsCopy = {
         description:
           "Position your company as a green industry pioneer with zero-emission mobility.",
         icon: Leaf,
+      },
+      {
+        title: "Leasing & Vehicle Sales",
+        description:
+          "Offering a variety of electric vehicles for purchase or lease at affordable prices to suit your business operational needs.",
+        icon: CarFront,
       },
     ],
   },

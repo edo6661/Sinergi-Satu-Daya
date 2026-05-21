@@ -5,7 +5,7 @@ export const companyProfileCopy = {
     tagline: "Tentang PT Sinergi Satu Daya",
     heading: "Penggerak Utama Transformasi Mobilitas Berkelanjutan",
     description:
-      "PT Sinergi Satu Daya (SSD) hadir sebagai pelopor Integrated Mobility Solution Provider. Kami tidak sekadar menyewakan kendaraan, kami mendampingi bisnis Anda melakukan transisi ke ekosistem kendaraan listrik (EV) tanpa mengganggu operasional. Dari pengadaan armada, instalasi infrastruktur charging, hingga proteksi keselamatan LFK—semuanya dalam satu pintu.",
+      "Berdiri sejak tahun 2025, PT Sinergi Satu Daya (SSD) hadir sebagai pelopor Integrated Mobility Solution Provider. Misi kami berkomitmen untuk menyediakan kendaraan listrik yang aman dan efisien, serta layanan purna jual yang memuaskan. Kami tidak sekadar menyewakan kendaraan, kami mendampingi bisnis Anda melakukan transisi ke ekosistem EV secara menyeluruh.",
     cta: "Jadwalkan Konsultasi Bisnis",
     badges: [
       {
@@ -29,7 +29,7 @@ export const companyProfileCopy = {
     tagline: "About PT Sinergi Satu Daya",
     heading: "The Main Driver of Sustainable Mobility Transformation",
     description:
-      "PT Sinergi Satu Daya (SSD) stands as a pioneer in Integrated Mobility Solutions. We don't just lease vehicles; we guide your business through a seamless transition to the electric vehicle (EV) ecosystem without disrupting operations. From fleet procurement and charging infrastructure installation to LFK safety protection—everything under one roof.",
+      "Established in 2025, PT Sinergi Satu Daya (SSD) stands as a pioneer in Integrated Mobility Solutions. Our mission is committed to providing safe and efficient electric vehicles, along with highly satisfying after-sales services. We don't just lease vehicles; we guide your business through a seamless transition to the EV ecosystem.",
     cta: "Schedule Business Consultation",
     badges: [
       {
