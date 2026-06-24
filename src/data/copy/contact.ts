@@ -6,7 +6,7 @@ export const contactCopy = {
       tagline: "Mulai Transformasi Anda",
       heading: "Hubungi Tim Konsultan Kami",
       description:
-        "Siap beralih ke armada bebas emisi atau butuh perhitungan ROI khusus untuk bisnis Anda? Tim ahli kami siap membantu Anda dari perencanaan hingga eksekusi.",
+        "Butuh penjualan kendaraan EV, rental B2B, konsultasi EV, pemasangan EV charger, atau sistem fire safety LFK? Tim konsultan kami siap membantu dari perencanaan hingga eksekusi.",
       details: [
         {
           icon: MapPin,
@@ -38,15 +38,15 @@ export const contactCopy = {
       fields: {
         name: "Nama Lengkap & Perusahaan",
         phone: "Nomor HP / WhatsApp",
-        vehicleType: "Jenis Armada yang Dibutuhkan",
+        vehicleType: "Jenis Layanan yang Dibutuhkan",
         unitCount: "Estimasi Jumlah Unit",
         location: "Lokasi Pengadaan / Pool",
       },
       options: {
-        placeholder: "Pilih Jenis Kendaraan",
-        passenger: "Mobil Penumpang (Executive/Operasional)",
-        commercial: "Kendaraan Niaga (Van/Kargo)",
-        custom: "Custom / Konsultasi Dulu",
+        placeholder: "Pilih Jenis Layanan",
+        passenger: "Penjualan Kendaraan EV",
+        commercial: "Rental B2B",
+        custom: "Konsultasi EV / Infrastruktur (Charger & LFK)",
       },
       submit: "Daftar Sekarang",
     },
@@ -56,7 +56,7 @@ export const contactCopy = {
       tagline: "Start Your Transformation",
       heading: "Contact Our Consulting Team",
       description:
-        "Ready to switch to a zero-emission fleet or need a custom ROI calculation for your business? Our expert team is ready to assist from planning to execution.",
+        "Need EV vehicle sales, B2B rental, EV consulting, EV charger installation, or LFK fire safety systems? Our consulting team is ready to assist from planning to execution.",
       details: [
         {
           icon: MapPin,
@@ -88,15 +88,15 @@ export const contactCopy = {
       fields: {
         name: "Full Name & Company",
         phone: "Phone / WhatsApp Number",
-        vehicleType: "Required Fleet Type",
+        vehicleType: "Required Service Type",
         unitCount: "Estimated Number of Units",
         location: "Procurement / Pool Location",
       },
       options: {
-        placeholder: "Select Vehicle Type",
-        passenger: "Passenger Car (Executive/Operational)",
-        commercial: "Commercial Vehicle (Van/Cargo)",
-        custom: "Custom / Need Consultation First",
+        placeholder: "Select Service Type",
+        passenger: "EV Vehicle Sales",
+        commercial: "B2B Rental",
+        custom: "EV Consulting / Infrastructure (Charger & LFK)",
       },
       submit: "Register Now",
     },

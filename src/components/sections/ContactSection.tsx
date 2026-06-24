@@ -38,7 +38,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
     const message = `Halo Tim SSD, saya ingin meminta penawaran dengan detail berikut:\n
 *Nama/Perusahaan:* ${formData.name}\n
 *No HP/WA:* ${formData.phone}\n
-*Jenis Armada:* ${formData.vehicleType}\n
+*Jenis Layanan:* ${formData.vehicleType}\n
 *Jumlah Unit:* ${formData.unitCount} Unit\n
 *Lokasi:* ${formData.location}\n
 \nMohon informasi lebih lanjut. Terima kasih.`;
@@ -187,8 +187,8 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                 type="submit"
                 disabled={isSubmitting}
                 className={`w-full mt-4 group flex items-center justify-center gap-2.5 px-8 py-4.5 rounded-xl font-bold uppercase tracking-widest text-xs transition-all duration-300 overflow-hidden relative border border-transparent cursor-pointer ${isSubmitting
-                    ? 'bg-surface-light text-content-muted cursor-not-allowed border-border-light'
-                    : 'bg-primary hover:bg-primary-hover text-surface-white shadow-[0_12px_30px_rgba(30,41,59,0.18)] hover:-translate-y-0.5'
+                  ? 'bg-surface-light text-content-muted cursor-not-allowed border-border-light'
+                  : 'bg-primary hover:bg-primary-hover text-surface-white shadow-[0_12px_30px_rgba(30,41,59,0.18)] hover:-translate-y-0.5'
                   }`}
               >
                 {!isSubmitting && <div className="absolute inset-0 bg-white/10 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />}

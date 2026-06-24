@@ -1,10 +1,10 @@
 export const fleetCopy = {
   id: {
-    tagline: "Pilihan Armada EV",
-    heading: "Armada Premium untuk Setiap Skala Operasional",
+    tagline: "Penjualan & Rental Kendaraan EV",
+    heading: "Kendaraan EV untuk Setiap Skala Operasional",
     description:
-      "Dari mobil penumpang eksekutif hingga van kargo niaga. Semua unit siap jalan, dirawat secara berkala, dan terintegrasi penuh dengan infrastruktur charging SSD.",
-    cta: "Cek Ketersediaan Armada",
+      "Dari mobil penumpang eksekutif hingga van kargo niaga. Tersedia untuk penjualan maupun rental B2B, dirawat secara berkala, dan terintegrasi dengan infrastruktur charging SSD.",
+    cta: "Cek Ketersediaan Kendaraan",
     filters: {
       all: "Semua Armada",
       passenger: "Mobil Penumpang",
@@ -13,11 +13,11 @@ export const fleetCopy = {
     },
   },
   en: {
-    tagline: "EV Fleet Selection",
-    heading: "Premium Fleet for Every Operational Scale",
+    tagline: "EV Vehicle Sales & Rental",
+    heading: "EV Vehicles for Every Operational Scale",
     description:
-      "From executive passenger cars to commercial cargo vans. All units are road-ready, routinely maintained, and fully integrated with SSD's charging infrastructure.",
-    cta: "Check Fleet Availability",
+      "From executive passenger cars to commercial cargo vans. Available for purchase or B2B rental, routinely maintained, and integrated with SSD charging infrastructure.",
+    cta: "Check Vehicle Availability",
     filters: {
       all: "All Fleet",
       passenger: "Passenger Cars",

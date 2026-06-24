@@ -1,83 +1,83 @@
 import {
   TrendingDown,
-  Layers,
-  ShieldAlert,
-  Leaf,
   CarFront,
+  Users,
+  PlugZap,
+  ShieldAlert,
 } from "lucide-react";
 
 export const benefitsCopy = {
   id: {
     tagline: "Nilai Lebih untuk Bisnis Anda",
-    heading: "Mengapa Memilih Ekosistem SSD?",
-    cta: "Hitung Estimasi Penghematan Anda",
+    heading: "Layanan Ekosistem SSD untuk Bisnis",
+    cta: "Jadwalkan Konsultasi Bisnis",
     items: [
       {
-        title: "Efisiensi Biaya Operasional",
+        title: "Penjualan Kendaraan EV",
         description:
-          "Pangkas pengeluaran bahan bakar dan perawatan rutin armada Anda secara signifikan.",
+          "Menyediakan berbagai jenis kendaraan listrik untuk dibeli sesuai kebutuhan operasional bisnis Anda.",
+        icon: CarFront,
+      },
+      {
+        title: "Rental B2B",
+        description:
+          "Menyediakan kendaraan listrik untuk disewa sesuai kebutuhan operasional bisnis Anda.",
         icon: TrendingDown,
       },
       {
-        title: "Solusi Terintegrasi (End-to-End)",
+        title: "Konsultasi EV B2B",
         description:
-          "Bebas ribet. Kami urus semuanya mulai dari unit EV, infrastruktur charging, hingga perizinan.",
-        icon: Layers,
+          "Konsultasi EV B2B. Fokus utama untuk 6 bulan hingga 1 tahun ke depan.",
+        icon: Users,
       },
       {
-        title: "Keamanan Standar",
+        title: "Pemasangan EV Charger",
         description:
-          "Mitigasi risiko maksimal dengan sistem yang dirancang khusus untuk baterai EV.",
+          "Instalasi charging station di pool/gudang Anda, ditambah akses ke jaringan publik SSD.",
+        icon: PlugZap,
+      },
+      {
+        title: "Fire Safety LFK",
+        description:
+          "Sistem mitigasi kebakaran khusus baterai lithium (EV) di area pool dan charging station Anda.",
         icon: ShieldAlert,
-      },
-      {
-        title: "Peningkatan Reputasi ESG",
-        description:
-          "Jadikan perusahaan Anda pelopor industri hijau dengan mobilitas tanpa emisi karbon.",
-        icon: Leaf,
-      },
-      {
-        title: "Sewa & Jual Beli Kendaraan",
-        description:
-          "Menawarkan berbagai jenis kendaraan listrik untuk dibeli maupun disewa dengan harga terjangkau sesuai kebutuhan operasional bisnis Anda.",
-        icon: CarFront,
       },
     ],
   },
   en: {
     tagline: "Value for Your Business",
-    heading: "Why Choose the SSD Ecosystem?",
-    cta: "Calculate Your Estimated Savings",
+    heading: "SSD Ecosystem Services for Business",
+    cta: "Schedule Business Consultation",
     items: [
       {
-        title: "Operational Cost Efficiency",
+        title: "EV Vehicle Sales",
         description:
-          "Significantly cut your business fleet's fuel and routine maintenance expenses.",
+          "Providing a variety of electric vehicles for purchase to suit your business operational needs.",
+        icon: CarFront,
+      },
+      {
+        title: "B2B Rental",
+        description:
+          "Providing electric vehicles for lease to suit your business operational needs.",
         icon: TrendingDown,
       },
       {
-        title: "End-to-End Integrated Solution",
+        title: "B2B EV Consulting",
         description:
-          "Hassle-free. We handle everything from EV units and infrastruktur charging to licensing.",
-        icon: Layers,
+          "B2B EV consulting. Primary focus for the next 6 months to 1 year.",
+        icon: Users,
       },
       {
-        title: "Safety Standards",
+        title: "EV Charger Installation",
         description:
-          "Maximum risk mitigation with our specialized safety system designed for EV batteries.",
+          "Charging station installation at your pool/warehouse, plus access to the SSD public network.",
+        icon: PlugZap,
+      },
+      {
+        title: "LFK Fire Safety",
+        description:
+          "Specialized fire mitigation system for EV lithium batteries in your fleet pool and charging areas.",
         icon: ShieldAlert,
-      },
-      {
-        title: "ESG Reputation Boost",
-        description:
-          "Position your company as a green industry pioneer with zero-emission mobility.",
-        icon: Leaf,
-      },
-      {
-        title: "Leasing & Vehicle Sales",
-        description:
-          "Offering a variety of electric vehicles for purchase or lease at affordable prices to suit your business operational needs.",
-        icon: CarFront,
       },
     ],
   },
