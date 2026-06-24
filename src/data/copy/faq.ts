@@ -7,7 +7,7 @@ export const faqCopy = {
     items: [
       {
         question:
-          "Bagaimana skema pengisian daya (charging) untuk armada logistik kami?",
+          "Bagaimana skema pengisian daya (charging) untuk armada Anda?",
         answer:
           "Kami menyediakan instalasi charging station langsung di pool/gudang Anda, ditambah akses ke jaringan publik SSD. Kami juga membantu menyusun manajemen daya agar pengisian tidak mengganggu jam operasional dan kelistrikan fasilitas Anda.",
       },
@@ -37,7 +37,7 @@ export const faqCopy = {
     cta: "Consult with an Expert",
     items: [
       {
-        question: "How does the charging scheme work for our logistics fleet?",
+        question: "How does the charging scheme work for our fleet?",
         answer:
           "We provide charging station installations directly at your pool/warehouse, plus access to the SSD public network. We also help structure power management so charging doesn't disrupt operations or overload your facility's electricity.",
       },
@@ -49,7 +49,7 @@ export const faqCopy = {
       {
         question: "What happens if a unit breaks down during operation?",
         answer:
-          "We provide a 24/7 emergency response service. If a unit requires intensive repair, SSD will dispatch a temporary replacement (backup unit) to ensure your logistics and business operations remain uninterrupted.",
+          "We provide a 24/7 emergency response service. If a unit requires intensive repair, SSD will dispatch a temporary replacement (backup unit) to ensure your business operations remain uninterrupted.",
       },
       {
         question:

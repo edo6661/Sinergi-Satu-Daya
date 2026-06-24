@@ -5,7 +5,7 @@ export const companyProfileCopy = {
     tagline: "Tentang PT Sinergi Satu Daya",
     heading: "Penggerak Utama Transformasi Mobilitas Berkelanjutan",
     description:
-      "Berdiri sejak tahun 2025, PT Sinergi Satu Daya (SSD) hadir sebagai pelopor Integrated Mobility Solution Provider. Misi kami berkomitmen untuk menyediakan kendaraan listrik yang aman dan efisien, serta layanan purna jual yang memuaskan. Kami tidak sekadar menyewakan kendaraan, kami mendampingi bisnis Anda melakukan transisi ke ekosistem EV secara menyeluruh.",
+      "Berdiri sejak tahun 2019, PT Sinergi Satu Daya (SSD) hadir sebagai pelopor Integrated Mobility Solution Provider. Misi kami berkomitmen untuk menyediakan kendaraan listrik yang aman dan efisien, serta layanan purna jual yang memuaskan. Kami tidak sekadar menyediakan kendaraan, kami mendampingi bisnis Anda melakukan transisi ke ekosistem EV secara menyeluruh.",
     cta: "Jadwalkan Konsultasi Bisnis",
     badges: [
       {
@@ -15,7 +15,7 @@ export const companyProfileCopy = {
       },
       {
         title: "Proteksi Menyeluruh",
-        desc: "Dilengkapi sistem keselamatan standar industri (LFK).",
+        desc: "Dilengkapi sistem keselamatan standar industri.",
         icon: ShieldCheck,
       },
       {
@@ -39,7 +39,7 @@ export const companyProfileCopy = {
       },
       {
         title: "Comprehensive Protection",
-        desc: "Equipped with industry-standard safety systems (LFK).",
+        desc: "Equipped with industry-standard safety systems.",
         icon: ShieldCheck,
       },
       {

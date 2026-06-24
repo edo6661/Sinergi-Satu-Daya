@@ -15,19 +15,19 @@ export const benefitsCopy = {
       {
         title: "Efisiensi Biaya Operasional",
         description:
-          "Pangkas pengeluaran bahan bakar dan perawatan rutin armada logistik Anda secara signifikan.",
+          "Pangkas pengeluaran bahan bakar dan perawatan rutin armada Anda secara signifikan.",
         icon: TrendingDown,
       },
       {
         title: "Solusi Terintegrasi (End-to-End)",
         description:
-          "Bebas ribet. Kami urus semuanya mulai dari unit EV, instalasi charging station, hingga perizinan.",
+          "Bebas ribet. Kami urus semuanya mulai dari unit EV, infrastruktur charging, hingga perizinan.",
         icon: Layers,
       },
       {
-        title: "Keamanan Standar LFK",
+        title: "Keamanan Standar",
         description:
-          "Mitigasi risiko maksimal dengan sistem Fire Safety LFK yang dirancang khusus untuk baterai EV.",
+          "Mitigasi risiko maksimal dengan sistem yang dirancang khusus untuk baterai EV.",
         icon: ShieldAlert,
       },
       {
@@ -52,19 +52,19 @@ export const benefitsCopy = {
       {
         title: "Operational Cost Efficiency",
         description:
-          "Significantly cut your logistics fleet's fuel and routine maintenance expenses.",
+          "Significantly cut your business fleet's fuel and routine maintenance expenses.",
         icon: TrendingDown,
       },
       {
         title: "End-to-End Integrated Solution",
         description:
-          "Hassle-free. We handle everything from EV units and charging station installations to licensing.",
+          "Hassle-free. We handle everything from EV units and infrastruktur charging to licensing.",
         icon: Layers,
       },
       {
-        title: "LFK Safety Standards",
+        title: "Safety Standards",
         description:
-          "Maximum risk mitigation with our specialized LFK Fire Safety system designed for EV batteries.",
+          "Maximum risk mitigation with our specialized safety system designed for EV batteries.",
         icon: ShieldAlert,
       },
       {

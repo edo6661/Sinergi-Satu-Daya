@@ -32,13 +32,13 @@ export const testimonialCopy = {
   },
   en: {
     tagline: "Our Partners' Success Stories",
-    heading: "Trusted by Logistics Industry Leaders",
+    heading: "Trusted by Business Industry Leaders",
     cta: "Become Our Next Success Story",
     reviews: [
       {
         id: "t1",
         quote:
-          "Transitioning to EVs was initially daunting for our logistics operations. However, SSD's end-to-end ecosystem, especially the backup unit guarantee and charging installation, made it seamless. Our fleet's operational costs have dropped drastically.",
+          "Transitioning to EVs was initially daunting for our business operations. However, SSD's end-to-end ecosystem, especially the backup unit guarantee and charging installation, made it seamless. Our fleet's operational costs have dropped drastically.",
         author: "Budi Santoso",
         role: "Chief Operating Officer",
         company: "PT Logistik Nusantara",

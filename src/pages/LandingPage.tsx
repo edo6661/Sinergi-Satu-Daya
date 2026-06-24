@@ -59,7 +59,7 @@ export const LandingPage: React.FC = () => {
         <meta property="og:site_name" content="SSD Mobility" />
         <meta property="og:url" content="https://www.sinergisatudaya.co.id" />
         <meta property="og:title" content={lang === 'id' ? 'SSD Mobility | Ekosistem Kendaraan Listrik B2B' : 'SSD Mobility | B2B Electric Vehicle Ecosystem'} />
-        <meta property="og:description" content={lang === 'id' ? 'Solusi lengkap transisi armada EV untuk operasional bisnis dan logistik dengan sistem keselamatan LFK.' : 'Complete EV fleet transition solutions for business and logistics operations with LFK safety systems.'} />
+        <meta property="og:description" content={lang === 'id' ? 'Solusi lengkap transisi armada EV untuk operasional bisnis dengan sistem keselamatan berstandar internasional.' : 'Complete EV fleet transition solutions for business operations with international safety standards systems.'} />
         <meta property="og:image" content="https://www.sinergisatudaya.co.id/og-image.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
@@ -68,7 +68,7 @@ export const LandingPage: React.FC = () => {
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={lang === 'id' ? 'SSD Mobility | Ekosistem Kendaraan Listrik B2B' : 'SSD Mobility | B2B Electric Vehicle Ecosystem'} />
-        <meta name="twitter:description" content={lang === 'id' ? 'Solusi lengkap transisi armada EV untuk operasional bisnis dan logistik.' : 'Complete EV fleet transition solutions for business and logistics operations.'} />
+        <meta name="twitter:description" content={lang === 'id' ? 'Solusi lengkap transisi armada EV untuk operasional bisnis dengan sistem keselamatan berstandar internasional.' : 'Complete EV fleet transition solutions for business operations with international safety standards systems.'} />
         <meta name="twitter:image" content="https://www.sinergisatudaya.co.id/og-image.jpg" />
       </Helmet>
       {/* Simple Sticky Header (Untuk Logo & Language Toggle) */}
