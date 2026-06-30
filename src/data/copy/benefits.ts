@@ -9,7 +9,7 @@ import {
 export const benefitsCopy = {
   id: {
     tagline: "Nilai Lebih untuk Bisnis Anda",
-    heading: "Layanan Ekosistem SSD untuk Bisnis",
+    heading: "Layanan ssd untuk ekosistem bisnis anda",
     cta: "Jadwalkan Konsultasi Bisnis",
     items: [
       {
@@ -27,7 +27,7 @@ export const benefitsCopy = {
       {
         title: "Konsultasi EV B2B",
         description:
-          "Konsultasi EV B2B. Fokus utama untuk 6 bulan hingga 1 tahun ke depan.",
+          "Konsultasi EV B2B. Fokus utama untuk tranformasi kendaraan ke ev",
         icon: Users,
       },
       {
@@ -37,7 +37,7 @@ export const benefitsCopy = {
         icon: PlugZap,
       },
       {
-        title: "Fire Safety LFK",
+        title: "Proteksi keamanan kendaraan listrik",
         description:
           "Sistem mitigasi kebakaran khusus baterai lithium (EV) di area pool dan charging station Anda.",
         icon: ShieldAlert,

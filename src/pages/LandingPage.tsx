@@ -83,7 +83,8 @@ export const LandingPage: React.FC = () => {
             <img
               src="/logo/transparent-no-char.png"
               alt="SSD Mobility"
-              className="h-10 md:h-12 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
+              className="h-14 md:h-20 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
+
             />
             <div className="flex flex-col">
               <span className="text-surface-white font-black font-heading text-lg md:text-xl tracking-tight leading-none group-hover:text-accent transition-colors duration-300">MOBILITY</span>
@@ -177,7 +178,7 @@ export const LandingPage: React.FC = () => {
                 </div>
                 <p className="text-sm max-w-sm text-center md:text-left leading-relaxed font-medium">
                   {lang === 'id'
-                    ? 'Solusi EV B2B terintegrasi: penjualan kendaraan EV, rental B2B, konsultasi EV, pemasangan EV charger, dan sistem fire safety LFK.'
+                    ? 'Solusi EV terintegrasi untuk kebutuhan operasional perusahaan, mencakup kendaraan, konsultasi, manajemen operasional, dan infrastruktur pengisian daya.'
                     : 'Integrated B2B EV solutions: EV vehicle sales, B2B rental, EV consulting, EV charger installation, and LFK fire safety systems.'}
                 </p>
               </div>

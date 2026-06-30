@@ -9,7 +9,7 @@ export const pricingCopy = {
         name: "Konsultasi EV B2B",
         price: "Hubungi Kami",
         description:
-          "Konsultasi EV B2B untuk bisnis. Fokus utama untuk 6 bulan hingga 1 tahun ke depan.",
+          "Konsultasi EV B2B untuk bisnis. Fokus untuk tranformasi kendaraan ke ev",
         features: [
           "Konsultasi EV B2B",
           "Fokus 6 bulan hingga 1 tahun ke depan",
@@ -20,7 +20,7 @@ export const pricingCopy = {
       {
         id: "corporate",
         name: "Rental B2B",
-        price: "Mulai Rp 8 Juta",
+        price: "Mulai Rp 5 Juta",
         description:
           "Sewa kendaraan EV untuk kebutuhan operasional bisnis dengan biaya bulanan yang dapat diprediksi.",
         features: [
