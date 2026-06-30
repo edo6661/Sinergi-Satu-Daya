@@ -3,9 +3,9 @@
 @plugin "@tailwindcss/typography";
 
 @theme {
-  /* Tipografi yang lebih elegan */
+  /* Montserrat = body, Poppins = heading */
   --font-sans: "Montserrat", system-ui, sans-serif;
-  --font-heading: "Orbitron", var(--font-sans);
+  --font-heading: "Poppins", var(--font-sans);
 
   /* Palet Warna Premium (Deep Industrial) */
   --color-surface-light: #f8fafc;
