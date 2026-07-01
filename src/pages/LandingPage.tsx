@@ -32,12 +32,24 @@ export const LandingPage: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToContact = useCallback(() => {
-    const contactSection = document.getElementById('contact-section');
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth' });
-    }
+  const scrollToSection = useCallback((sectionId: string) => {
+    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
   }, []);
+
+  const scrollToContact = useCallback(() => {
+    scrollToSection('contact-section');
+  }, [scrollToSection]);
+
+  const navLinks = [
+    { id: 'home-section', labelId: 'Beranda', labelEn: 'Home' },
+    { id: 'layanan-section', labelId: 'Layanan', labelEn: 'Services' },
+    { id: 'contact-section', labelId: 'Kontak', labelEn: 'Contact' },
+  ] as const;
+
+  const handleNavClick = (sectionId: string) => {
+    scrollToSection(sectionId);
+    setIsMobileMenuOpen(false);
+  };
 
   const toggleLanguage = () => {
     i18n.changeLanguage(lang === 'id' ? 'en' : 'id');
@@ -95,6 +107,17 @@ export const LandingPage: React.FC = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
+            <nav className="flex items-center gap-6">
+              {navLinks.map((link) => (
+                <button
+                  key={link.id}
+                  onClick={() => handleNavClick(link.id)}
+                  className="text-xs font-bold text-content-light/70 hover:text-surface-white transition-colors tracking-widest"
+                >
+                  {lang === 'id' ? link.labelId : link.labelEn}
+                </button>
+              ))}
+            </nav>
             <button onClick={toggleLanguage} className="text-xs font-bold text-content-light/70 hover:text-surface-white transition-colors tracking-widest flex items-center gap-1">
               <span className={lang === 'id' ? 'text-accent' : ''}>ID</span>
               <span className="text-white/20">/</span>
@@ -116,8 +139,17 @@ export const LandingPage: React.FC = () => {
         </div>
 
         {/* 5. Mobile Menu Dropdown (Animasi expand) */}
-        <div className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out bg-surface-darkest/95 backdrop-blur-xl border-b border-white/10 ${isMobileMenuOpen ? 'max-h-48 opacity-100' : 'max-h-0 opacity-0 border-transparent'}`}>
+        <div className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out bg-surface-darkest/95 backdrop-blur-xl border-b border-white/10 ${isMobileMenuOpen ? 'max-h-80 opacity-100' : 'max-h-0 opacity-0 border-transparent'}`}>
           <div className="container mx-auto px-6 py-4 flex flex-col gap-4">
+            {navLinks.map((link) => (
+              <button
+                key={link.id}
+                onClick={() => handleNavClick(link.id)}
+                className="w-full text-left py-2 text-sm font-bold text-content-light hover:text-accent transition-colors tracking-widest"
+              >
+                {lang === 'id' ? link.labelId : link.labelEn}
+              </button>
+            ))}
             <button onClick={toggleLanguage} className="w-full text-left py-2 text-sm font-bold text-content-light hover:text-accent transition-colors tracking-widest flex items-center gap-2">
               <span>{lang === 'id' ? 'Bahasa:' : 'Language:'}</span>
               <span className={lang === 'id' ? 'text-accent' : 'text-content-muted'}>ID</span>
@@ -130,10 +162,12 @@ export const LandingPage: React.FC = () => {
           </div>
         </div>
       </header>
-      <HeroSection
-        onPrimaryClick={scrollToContact}
-        onSecondaryClick={() => document.getElementById('profile-section')?.scrollIntoView({ behavior: 'smooth' })}
-      />
+      <div id="home-section">
+        <HeroSection
+          onPrimaryClick={scrollToContact}
+          onSecondaryClick={() => scrollToSection('profile-section')}
+        />
+      </div>
       <Suspense fallback={
         <div className="h-screen bg-surface-darkest flex flex-col items-center justify-center">
           <div className="relative w-16 h-16 flex items-center justify-center mb-4">
@@ -151,7 +185,9 @@ export const LandingPage: React.FC = () => {
         </div>
         <BusinessBenefits onCalculateClick={scrollToContact} />
         <FleetShowcase onCheckAvailabilityClick={scrollToContact} />
-        <PricingSection onPlanSelect={scrollToContact} />
+        <div id="layanan-section">
+          <PricingSection onPlanSelect={scrollToContact} />
+        </div>
         <BusinessFaq onContactClick={scrollToContact} />
         <MediaHighlightsSection onCtaClick={scrollToContact} />
         <ClientsPartnersSection />

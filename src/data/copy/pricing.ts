@@ -72,7 +72,7 @@ export const pricingCopy = {
       {
         id: "corporate",
         name: "B2B Rental",
-        price: "From Rp 8 Million",
+        price: "From Rp 5 Million",
         description:
           "EV vehicle lease for business operational needs with predictable monthly costs.",
         features: [
