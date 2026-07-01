@@ -1,0 +1,86 @@
+export interface LogoItem {
+  id: string;
+  name: string;
+  image?: string;
+}
+
+export const clientsPartnersCopy = {
+  id: {
+    tagline: "Kepercayaan & Kolaborasi",
+    heading: "Klien & Mitra Kami",
+    clientsLabel: "Our Valuable Customer",
+    partnersLabel: "Our Partners",
+    dragHint: "Geser untuk melihat lebih banyak",
+    clients: [
+      { id: "c1", name: "Kementerian Perindustrian RI" },
+      { id: "c2", name: "Badan Intelijen Negara (BIN)" },
+      { id: "c3", name: "PLN" },
+      { id: "c4", name: "Haleyora Powerindo" },
+      { id: "c5", name: "MNP" },
+      { id: "c6", name: "Pelindo" },
+      { id: "c7", name: "JUP by JAKPRO" },
+      { id: "c8", name: "Partai Golkar" },
+      { id: "c9", name: "PDI Perjuangan" },
+      { id: "c10", name: "EBDC" },
+      { id: "c11", name: "Grab" },
+      { id: "c12", name: "Kertajati International Airport" },
+      { id: "c13", name: "Bank Papua" },
+      { id: "c14", name: "BDF Ventura" },
+      { id: "c15", name: "Kebun Raya BRIN" },
+    ] satisfies LogoItem[],
+    partners: [
+      { id: "p1", name: "Wuling" },
+      { id: "p2", name: "MAB" },
+      { id: "p3", name: "DFSK" },
+      { id: "p4", name: "Foton" },
+      { id: "p5", name: "Volta" },
+      { id: "p6", name: "Maka Motors" },
+      { id: "p7", name: "Birkens" },
+      { id: "p8", name: "Indomobil Group" },
+      { id: "p9", name: "Adira Finance" },
+      { id: "p10", name: "Maybank Finance" },
+      { id: "p11", name: "Mandiri Tunas Finance" },
+      { id: "p12", name: "IMFI" },
+    ] satisfies LogoItem[],
+  },
+  en: {
+    tagline: "Trust & Collaboration",
+    heading: "Our Clients & Partners",
+    clientsLabel: "Our Valuable Customer",
+    partnersLabel: "Our Partners",
+    dragHint: "Drag to explore more",
+    clients: [
+      { id: "c1", name: "Ministry of Industry of Indonesia" },
+      { id: "c2", name: "State Intelligence Agency (BIN)" },
+      { id: "c3", name: "PLN" },
+      { id: "c4", name: "Haleyora Powerindo" },
+      { id: "c5", name: "MNP" },
+      { id: "c6", name: "Pelindo" },
+      { id: "c7", name: "JUP by JAKPRO" },
+      { id: "c8", name: "Golkar Party" },
+      { id: "c9", name: "PDI Perjuangan" },
+      { id: "c10", name: "EBDC" },
+      { id: "c11", name: "Grab" },
+      { id: "c12", name: "Kertajati International Airport" },
+      { id: "c13", name: "Bank Papua" },
+      { id: "c14", name: "BDF Ventura" },
+      { id: "c15", name: "Kebun Raya BRIN" },
+    ] satisfies LogoItem[],
+    partners: [
+      { id: "p1", name: "Wuling" },
+      { id: "p2", name: "MAB" },
+      { id: "p3", name: "DFSK" },
+      { id: "p4", name: "Foton" },
+      { id: "p5", name: "Volta" },
+      { id: "p6", name: "Maka Motors" },
+      { id: "p7", name: "Birkens" },
+      { id: "p8", name: "Indomobil Group" },
+      { id: "p9", name: "Adira Finance" },
+      { id: "p10", name: "Maybank Finance" },
+      { id: "p11", name: "Mandiri Tunas Finance" },
+      { id: "p12", name: "IMFI" },
+    ] satisfies LogoItem[],
+  },
+} as const;
+
+export type ClientsPartnersLanguage = keyof typeof clientsPartnersCopy;
