@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, ExternalLink, Newspaper } from 'lucide-react';
+import { ArrowRight, ExternalLink } from 'lucide-react';
 import { mediaHighlightsCopy } from '../../data/copy/mediaHighlights';
 import { useAppLanguage } from '../../hooks/useAppLanguage';
 
