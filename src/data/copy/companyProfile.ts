@@ -20,7 +20,7 @@ export const companyProfileCopy = {
       },
       {
         title: "Infrastruktur EV",
-        desc: "Pemasangan EV charger dan sistem fire safety LFK.",
+        desc: "Pemasangan tempat pengisian mobil listrik dan sistem keamanannya",
         icon: ShieldCheck,
       },
     ],

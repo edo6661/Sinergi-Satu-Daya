@@ -9,7 +9,7 @@ import {
 export const benefitsCopy = {
   id: {
     tagline: "Nilai Lebih untuk Bisnis Anda",
-    heading: "Layanan ssd untuk ekosistem bisnis anda",
+    heading: "Layanan SSD Untuk Ekosistem Bisnis Anda",
     cta: "Jadwalkan Konsultasi Bisnis",
     items: [
       {
@@ -33,7 +33,7 @@ export const benefitsCopy = {
       {
         title: "Pemasangan EV Charger",
         description:
-          "Instalasi charging station di pool/gudang Anda, ditambah akses ke jaringan publik SSD.",
+          "Menyediakan barang dan jasa instalasi tempat pengisian daya kendaraan listrik",
         icon: PlugZap,
       },
       {
