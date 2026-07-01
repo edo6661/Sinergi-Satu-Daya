@@ -12,7 +12,7 @@ const BusinessBenefits = lazy(() => import('../components/sections/BusinessBenef
 const FleetShowcase = lazy(() => import('../components/sections/FleetShowcase').then(m => ({ default: m.FleetShowcase })));
 const PricingSection = lazy(() => import('../components/sections/PricingSection').then(m => ({ default: m.PricingSection })));
 const BusinessFaq = lazy(() => import('../components/sections/BusinessFaq').then(m => ({ default: m.BusinessFaq })));
-const MediaHighlightsSection = lazy(() => import('../components/sections/MediaHighlightsSection').then(m => ({ default: m.MediaHighlightsSection })));
+const ProjectSuccessSection = lazy(() => import('../components/sections/ProjectSuccessSection').then(m => ({ default: m.ProjectSuccessSection })));
 const ClientsPartnersSection = lazy(() => import('../components/sections/ClientsPartnersSection').then(m => ({ default: m.ClientsPartnersSection })));
 const ContactSection = lazy(() => import('../components/sections/ContactSection').then(m => ({ default: m.ContactSection })));
 const FloatingWhatsApp = lazy(() => import('../components/ui/FloatingWhatsApp').then(m => ({ default: m.FloatingWhatsApp })));
@@ -189,7 +189,7 @@ export const LandingPage: React.FC = () => {
           <PricingSection onPlanSelect={scrollToContact} />
         </div>
         <BusinessFaq onContactClick={scrollToContact} />
-        <MediaHighlightsSection onCtaClick={scrollToContact} />
+        <ProjectSuccessSection onCtaClick={scrollToContact} />
         <ClientsPartnersSection />
 
         <div id="contact-section">
