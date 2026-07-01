@@ -12,7 +12,6 @@ const BusinessBenefits = lazy(() => import('../components/sections/BusinessBenef
 const FleetShowcase = lazy(() => import('../components/sections/FleetShowcase').then(m => ({ default: m.FleetShowcase })));
 const PricingSection = lazy(() => import('../components/sections/PricingSection').then(m => ({ default: m.PricingSection })));
 const BusinessFaq = lazy(() => import('../components/sections/BusinessFaq').then(m => ({ default: m.BusinessFaq })));
-const TestimonialSection = lazy(() => import('../components/sections/TestimonialSection').then(m => ({ default: m.TestimonialSection })));
 const ContactSection = lazy(() => import('../components/sections/ContactSection').then(m => ({ default: m.ContactSection })));
 const FloatingWhatsApp = lazy(() => import('../components/ui/FloatingWhatsApp').then(m => ({ default: m.FloatingWhatsApp })));
 
@@ -152,7 +151,6 @@ export const LandingPage: React.FC = () => {
         <FleetShowcase onCheckAvailabilityClick={scrollToContact} />
         <PricingSection onPlanSelect={scrollToContact} />
         <BusinessFaq onContactClick={scrollToContact} />
-        <TestimonialSection onCtaClick={scrollToContact} />
 
         <div id="contact-section">
           <ContactSection onSubmit={(data) => {
