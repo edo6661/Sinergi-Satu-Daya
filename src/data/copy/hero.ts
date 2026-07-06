@@ -1,19 +1,19 @@
 export const heroCopy = {
   id: {
     surtitle: "Ekosistem Kendaraan Listrik B2B Terpercaya",
-    headline: "One Stop Solution for Electric Mobility",
+    headline: "One-Stop Solution for Electric Mobility",
     description:
-      "Solusi EV terintegrasi untuk kebutuhan operasional perusahaan, mencakup kendaraan, konsultasi, manajemen operasional, dan infrastruktur pengisian daya.",
+      "Solusi kendaraan listrik terintegrasi untuk kebutuhan operasional perusahaan, mencakup penyediaan kendaraan, konsultasi, manajemen operasional, dan infrastruktur pengisian daya.",
     primaryCta: "Daftar Sekarang",
-    secondaryCta: "Join with us (Investor)",
+    secondaryCta: "Bergabung sebagai Investor",
   },
   en: {
     surtitle: "Trusted B2B Electric Vehicle Ecosystem",
-    headline: "One Stop Solution for Electric Mobility",
+    headline: "One-Stop Solution for Electric Mobility",
     description:
-      "Integrated B2B EV solutions for your business: EV vehicle sales, B2B rental, EV consulting, EV charger installation, and LFK fire safety systems.",
+      "Integrated B2B EV solutions for your business: EV sales, B2B rentals, EV consulting, EV charging station installations, and LFK fire safety systems.",
     primaryCta: "Register Now",
-    secondaryCta: "Join with us (Investor)",
+    secondaryCta: "Join Us (Investor)",
   },
 } as const;
 

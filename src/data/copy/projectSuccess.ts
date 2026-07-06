@@ -11,15 +11,15 @@ export interface ProjectSuccessItem {
 export const projectSuccessCopy = {
   id: {
     tagline: "Bukti Eksekusi di Lapangan",
-    heading: "Project Success",
+    heading: "Keberhasilan Proyek",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ringkasan portofolio proyek SSD Mobility yang telah berhasil dijalankan bersama mitra strategis.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ringkasan portofolio proyek SSD Mobility yang telah berhasil dijalankan bersama mitra strategis kami.",
     readMore: "Lihat Detail",
     cta: "Diskusikan Proyek Anda",
     projects: [
       {
         id: "ps1",
-        category: "Armada EV",
+        category: "Armada Kendaraan Listrik",
         categoryColor: "#00529C",
         title: "Lorem ipsum dolor sit amet consectetur",
         excerpt:
@@ -63,10 +63,10 @@ export const projectSuccessCopy = {
     tagline: "Proven Track Record",
     heading: "Project Success",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. A snapshot of SSD Mobility project portfolios successfully delivered with strategic partners.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. A snapshot of SSD Mobility's project portfolio, successfully delivered alongside our strategic partners.",
     readMore: "View Details",
     cta: "Discuss Your Project",
-    projects: [
+    projects: [ 
       {
         id: "ps1",
         category: "EV Fleet",

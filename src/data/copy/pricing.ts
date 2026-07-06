@@ -6,28 +6,28 @@ export const pricingCopy = {
     plans: [
       {
         id: "short-term",
-        name: "Konsultasi EV B2B",
+        name: "Konsultasi Kendaraan Listrik B2B",
         price: "Hubungi Kami",
         description:
-          "Konsultasi EV B2B untuk bisnis. Fokus untuk tranformasi kendaraan ke ev",
+          "Konsultasi kendaraan listrik B2B untuk bisnis. Fokus utama pada transformasi menuju kendaraan listrik.",
         features: [
-          "Konsultasi EV B2B",
-          "Fokus 6 bulan hingga 1 tahun ke depan",
+          "Konsultasi Kendaraan Listrik B2B",
+          "Fokus proyeksi 6 hingga 12 bulan ke depan",
         ],
         cta: "Pilih Paket",
         isPopular: false,
       },
       {
         id: "corporate",
-        name: "Rental B2B",
+        name: "Penyewaan B2B",
         price: "Mulai Rp 5 Juta",
         description:
-          "Sewa kendaraan EV untuk kebutuhan operasional bisnis dengan biaya bulanan yang dapat diprediksi.",
+          "Sewa kendaraan listrik untuk kebutuhan operasional bisnis dengan biaya bulanan yang dapat diprediksi.",
         features: [
-          "Unit EV Bebas Pilih",
-          "Full Maintenance Terjadwal",
+          "Bebas Pilih Unit Kendaraan Listrik",
+          "Pemeliharaan Penuh Terjadwal",
           "Asuransi Komprehensif (All-Risk)",
-          "Akses Jaringan Charging SSD",
+          "Akses Jaringan Pengisian Daya SSD",
           "Penggantian Unit Darurat",
         ],
         cta: "Minta Penawaran",
@@ -35,15 +35,15 @@ export const pricingCopy = {
       },
       {
         id: "end-to-end",
-        name: "Penjualan & Infrastruktur EV",
+        name: "Penjualan & Infrastruktur Kendaraan Listrik",
         price: "Custom Pricing",
         description:
-          "Penjualan kendaraan EV lengkap dengan pemasangan EV charger dan sistem fire safety LFK.",
+          "Penjualan kendaraan listrik lengkap dengan instalasi stasiun pengisian daya dan sistem proteksi kebakaran LFK.",
         features: [
           "Pengadaan Unit Kepemilikan",
-          "Instalasi Charging Station",
-          "Sistem Keselamatan LFK",
-          "Pelatihan Driver & Teknisi",
+          "Instalasi Stasiun Pengisian Daya",
+          "Sistem Proteksi Kebakaran LFK",
+          "Pelatihan Pengemudi & Teknisi",
           "Dukungan Teknis Prioritas",
         ],
         cta: "Konsultasi Custom",
@@ -61,22 +61,22 @@ export const pricingCopy = {
         name: "B2B EV Consulting",
         price: "Contact Us",
         description:
-          "B2B EV consulting for businesses. Primary focus for the next 6 months to 1 year.",
+          "B2B EV consulting for businesses. Primary focus targets fleet transformations for the next 6 to 12 months.",
         features: [
-          "B2B EV consulting",
-          "Focus for the next 6 months to 1 year",
+          "B2B EV Consulting",
+          "Focus on the next 6 to 12 months",
         ],
         cta: "Select Plan",
         isPopular: false,
       },
       {
         id: "corporate",
-        name: "B2B Rental",
+        name: "B2B Rentals",
         price: "From Rp 5 Million",
         description:
-          "EV vehicle lease for business operational needs with predictable monthly costs.",
+          "Electric vehicle leasing for business operational needs with predictable monthly costs.",
         features: [
-          "Choice of EV Unit",
+          "Choice of EV Models",
           "Scheduled Full Maintenance",
           "Comprehensive Insurance",
           "SSD Charging Network Access",
@@ -90,11 +90,11 @@ export const pricingCopy = {
         name: "EV Sales & Infrastructure",
         price: "Custom Pricing",
         description:
-          "EV vehicle sales complete with EV charger installation and LFK fire safety systems.",
+          "EV sales complete with charging station installations and LFK fire safety systems.",
         features: [
           "Ownership Unit Procurement",
-          "Charging Station Installation",
-          "LFK Safety System",
+          "Charging Station Installations",
+          "LFK Fire Safety System",
           "Driver & Technician Training",
           "Priority Tech Support",
         ],

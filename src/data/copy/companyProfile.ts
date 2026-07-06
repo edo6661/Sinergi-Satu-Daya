@@ -5,22 +5,22 @@ export const companyProfileCopy = {
     tagline: "Tentang PT Sinergi Satu Daya",
     heading: "Penggerak Utama Transformasi Mobilitas Berkelanjutan",
     description:
-      "Berdiri sejak tahun 2019, PT Sinergi Satu Daya (SSD) hadir sebagai pelopor Integrated Mobility Solution Provider. Kami menyediakan penjualan kendaraan EV, rental B2B, konsultasi EV untuk bisnis, pemasangan EV charger, serta sistem fire safety LFK. Fokus utama konsultasi B2B kami untuk 6 bulan hingga 1 tahun ke depan.",
+      "Berdiri sejak tahun 2019, PT Sinergi Satu Daya (SSD) hadir sebagai pelopor Penyedia Solusi Mobilitas Terintegrasi (Integrated Mobility Solution Provider). Kami menyediakan penjualan kendaraan listrik, penyewaan B2B, konsultasi kendaraan listrik untuk bisnis, instalasi stasiun pengisian daya, serta sistem proteksi kebakaran. Fokus utama layanan konsultasi B2B kami berada pada proyeksi 6 hingga 12 bulan ke depan.",
     cta: "Jadwalkan Konsultasi Bisnis",
     badges: [
       {
-        title: "Penjualan & Rental B2B",
-        desc: "Kendaraan EV untuk dibeli maupun disewa sesuai kebutuhan operasional bisnis.",
+        title: "Penjualan & Penyewaan B2B",
+        desc: "Kendaraan listrik untuk dibeli maupun disewa sesuai dengan kebutuhan operasional bisnis Anda.",
         icon: Zap,
       },
       {
-        title: "Konsultasi EV B2B",
-        desc: "Konsultasi EV B2B. Fokus 6 bulan hingga 1 tahun ke depan.",
+        title: "Konsultasi Kendaraan Listrik B2B",
+        desc: "Layanan konsultasi kendaraan listrik B2B dengan fokus proyeksi 6 hingga 12 bulan ke depan.",
         icon: TrendingUp,
       },
       {
-        title: "Infrastruktur EV",
-        desc: "Pemasangan tempat pengisian mobil listrik dan sistem keamanannya",
+        title: "Infrastruktur Kendaraan Listrik",
+        desc: "Instalasi stasiun pengisian daya kendaraan listrik beserta sistem keamanannya.",
         icon: ShieldCheck,
       },
     ],
@@ -29,22 +29,22 @@ export const companyProfileCopy = {
     tagline: "About PT Sinergi Satu Daya",
     heading: "The Main Driver of Sustainable Mobility Transformation",
     description:
-      "Established in 2025, PT Sinergi Satu Daya (SSD) stands as a pioneer in Integrated Mobility Solutions. We provide EV vehicle sales, B2B rental, EV consulting for businesses, EV charger installation, and LFK fire safety systems. Our primary B2B consulting focus is for the next 6 months to 1 year.",
-    cta: "Schedule Business Consultation",
+      "Established in 2019, PT Sinergi Satu Daya (SSD) stands as a pioneer in providing Integrated Mobility Solutions. We offer EV sales, B2B rentals, EV consulting for businesses, EV charging station installations, and LFK fire safety systems. Our primary B2B consulting focus targets the next 6 to 12 months.",
+    cta: "Schedule a Business Consultation",
     badges: [
       {
-        title: "EV Sales & B2B Rental",
-        desc: "Electric vehicles for purchase or lease to suit your business operational needs.",
+        title: "EV Sales & B2B Rentals",
+        desc: "Electric vehicles available for purchase or lease to meet your business's operational needs.",
         icon: Zap,
       },
       {
         title: "B2B EV Consulting",
-        desc: "B2B EV consulting. Focus for the next 6 months to 1 year.",
+        desc: "B2B EV consulting services focusing on the next 6 to 12 months.",
         icon: TrendingUp,
       },
       {
         title: "EV Infrastructure",
-        desc: "EV charger installation and LFK fire safety systems.",
+        desc: "EV charging station installations and LFK fire safety systems.",
         icon: ShieldCheck,
       },
     ],

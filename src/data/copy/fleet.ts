@@ -1,25 +1,25 @@
 export const fleetCopy = {
   id: {
-    tagline: "Penjualan & Rental Kendaraan EV",
-    heading: "Kendaraan EV untuk Setiap Skala Operasional",
+    tagline: "Penjualan & Penyewaan Kendaraan Listrik",
+    heading: "Kendaraan Listrik untuk Setiap Skala Operasional",
     description:
-      "Dari kendaraan roda dua hingga mobil penumpang dan armada niaga/logistik. Tersedia untuk penjualan maupun rental B2B, dirawat secara berkala, dan terintegrasi dengan infrastruktur charging SSD.",
+      "Dari kendaraan roda dua hingga mobil penumpang dan armada niaga atau logistik. Tersedia untuk penjualan maupun penyewaan B2B, dirawat secara berkala, dan terintegrasi dengan infrastruktur pengisian daya SSD.",
     cta: "Cek Ketersediaan Kendaraan",
     filters: {
       all: "Semua Armada",
       twoWheel: "Roda 2",
       passenger: "Mobil Penumpang",
-      commercial: "Niaga/Logistik",
+      commercial: "Niaga / Logistik",
     },
   },
   en: {
-    tagline: "EV Vehicle Sales & Rental",
-    heading: "EV Vehicles for Every Operational Scale",
+    tagline: "EV Sales & Rentals",
+    heading: "Electric Vehicles for Every Operational Scale",
     description:
-      "From two-wheelers to passenger cars and commercial/logistics fleets. Available for purchase or B2B rental, routinely maintained, and integrated with SSD charging infrastructure.",
+      "From two-wheelers to passenger cars and commercial or logistics fleets. Available for purchase or B2B rentals, routinely maintained, and integrated with SSD's charging infrastructure.",
     cta: "Check Vehicle Availability",
     filters: {
-      all: "All Fleet",
+      all: "All Fleets",
       twoWheel: "2-Wheelers",
       passenger: "Passenger Cars",
       commercial: "Commercial / Logistics",
@@ -29,6 +29,7 @@ export const fleetCopy = {
 
 export type FleetLanguage = keyof typeof fleetCopy;
 export type FleetCategory = "all" | "twoWheel" | "passenger" | "commercial";
+
 export const fleetData = [
   {
     id: "ev-maka",
@@ -60,21 +61,21 @@ export const fleetData = [
   },
   {
     id: "ev-mitra",
-    name: "Mitra EV (Wuling) 4 roda",
+    name: "Mitra EV (Wuling) 4 Roda",
     category: "commercial",
     range: "—",
     image: "/cars/dfsk-gelora-e.jpg",
   },
   {
     id: "ev-foton",
-    name: "Foton EV (4-6 roda)",
+    name: "Foton EV (4-6 Roda)",
     category: "commercial",
     range: "—",
     image: "/cars/dfsk-gelora-e.jpg",
   },
   {
     id: "ev-mab",
-    name: "MAB EV (3-6 roda)",
+    name: "MAB EV (3-6 Roda)",
     category: "commercial",
     range: "—",
     image: "/cars/dfsk-gelora-e.jpg",

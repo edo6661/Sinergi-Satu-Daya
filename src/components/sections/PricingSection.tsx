@@ -70,9 +70,9 @@ export const PricingSection: React.FC<PricingSectionProps> = ({
                   </div>
                 )}
 
-                {isHighlighted && (
+                  {isHighlighted && (
                   <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-accent to-orange-500 text-surface-darkest px-6 py-2 rounded-full text-[10px] font-black uppercase tracking-[0.2em] shadow-lg shadow-accent/20 border border-white/20 whitespace-nowrap z-20">
-                    Recommended for B2B
+                    {lang === 'id' ? 'Rekomendasi B2B' : 'Recommended for B2B'}
                   </div>
                 )}
 

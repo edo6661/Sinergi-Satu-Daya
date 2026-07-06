@@ -6,7 +6,7 @@ export const contactCopy = {
       tagline: "Mulai Transformasi Anda",
       heading: "Hubungi Tim Konsultan Kami",
       description:
-        "Butuh penjualan kendaraan EV, rental B2B, konsultasi EV, pemasangan EV charger, atau sistem fire safety LFK? Tim konsultan kami siap membantu dari perencanaan hingga eksekusi.",
+        "Membutuhkan layanan penjualan kendaraan listrik, penyewaan B2B, konsultasi kendaraan listrik, instalasi pengisi daya, atau sistem proteksi kebakaran ? Tim konsultan kami siap membantu Anda dari tahap perencanaan hingga eksekusi.",
       details: [
         {
           icon: MapPin,
@@ -15,15 +15,19 @@ export const contactCopy = {
         },
         {
           icon: MapPin,
-          title: "Gudang & Pool EV",
+          title: "Gudang & Pangkalan Armada Listrik",
           desc: "Kawasan Industri Jatake, Tangerang, Banten",
         },
         {
           icon: Phone,
           title: "Hotline B2B",
-          desc: "+62 812 3456 7890",
+          desc: "+62 812 3456 7890 (Tersedia WhatsApp)",
         },
-        { icon: Mail, title: "Email", desc: "support@sinergisatudaya.com" },
+        { 
+          icon: Mail, 
+          title: "Email", 
+          desc: "b2b@sinergisatudaya.co.id" 
+        },
         {
           icon: Clock,
           title: "Jam Operasional",
@@ -34,21 +38,21 @@ export const contactCopy = {
     form: {
       title: "Minta Penawaran Spesial",
       subtitle:
-        "Isi data berikut dan kami akan menghubungi Anda dalam 1x24 jam.",
+        "Isi data berikut dan tim kami akan menghubungi Anda dalam 1x24 jam.",
       fields: {
         name: "Nama Lengkap & Perusahaan",
         phone: "Nomor HP / WhatsApp",
         vehicleType: "Jenis Layanan yang Dibutuhkan",
         unitCount: "Estimasi Jumlah Unit",
-        location: "Lokasi Pengadaan / Pool",
+        location: "Lokasi Pengadaan / Pangkalan Armada",
       },
       options: {
         placeholder: "Pilih Jenis Layanan",
-        passenger: "Penjualan Kendaraan EV",
-        commercial: "Rental B2B",
-        custom: "Konsultasi EV / Infrastruktur (Charger & LFK)",
+        passenger: "Penjualan Kendaraan Listrik",
+        commercial: "Penyewaan B2B",
+        custom: "Konsultasi / Infrastruktur Kendaraan Listrik (Pengisi Daya & LFK)",
       },
-      submit: "Daftar Sekarang",
+      submit: "Kirim Permintaan",
     },
   },
   en: {
@@ -56,7 +60,7 @@ export const contactCopy = {
       tagline: "Start Your Transformation",
       heading: "Contact Our Consulting Team",
       description:
-        "Need EV vehicle sales, B2B rental, EV consulting, EV charger installation, or LFK fire safety systems? Our consulting team is ready to assist from planning to execution.",
+        "Require EV sales, B2B rentals, EV consulting, charging station installations, or LFK fire safety systems? Our consulting team is ready to assist you from planning to execution.",
       details: [
         {
           icon: MapPin,
@@ -65,15 +69,19 @@ export const contactCopy = {
         },
         {
           icon: MapPin,
-          title: "EV Warehouse & Pool",
+          title: "EV Warehouse & Fleet Pool",
           desc: "Jatake Industrial Estate, Tangerang, Banten",
         },
         {
           icon: Phone,
           title: "B2B Hotline",
-          desc: "+62 811-XXXX-XXXX (WhatsApp Available)",
+          desc: "+62 812 3456 7890 (WhatsApp Available)",
         },
-        { icon: Mail, title: "Email", desc: "b2b@sinergisatudaya.co.id" },
+        { 
+          icon: Mail, 
+          title: "Email", 
+          desc: "b2b@sinergisatudaya.co.id" 
+        },
         {
           icon: Clock,
           title: "Business Hours",
@@ -90,15 +98,15 @@ export const contactCopy = {
         phone: "Phone / WhatsApp Number",
         vehicleType: "Required Service Type",
         unitCount: "Estimated Number of Units",
-        location: "Procurement / Pool Location",
+        location: "Procurement / Fleet Pool Location",
       },
       options: {
         placeholder: "Select Service Type",
-        passenger: "EV Vehicle Sales",
-        commercial: "B2B Rental",
-        custom: "EV Consulting / Infrastructure (Charger & LFK)",
+        passenger: "EV Sales",
+        commercial: "B2B Rentals",
+        custom: "EV Consulting / Infrastructure (Chargers & LFK)",
       },
-      submit: "Register Now",
+      submit: "Submit Request",
     },
   },
 } as const;
@@ -112,4 +120,4 @@ export interface LeadFormData {
   vehicleType: string;
   unitCount: string;
   location: string;
-}
+} 

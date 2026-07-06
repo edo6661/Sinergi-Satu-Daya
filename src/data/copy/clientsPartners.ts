@@ -8,8 +8,8 @@ export const clientsPartnersCopy = {
   id: {
     tagline: "Kepercayaan & Kolaborasi",
     heading: "Klien & Mitra Kami",
-    clientsLabel: "Our Valuable Customer",
-    partnersLabel: "Our Partners",
+    clientsLabel: "Pelanggan Berharga Kami",
+    partnersLabel: "Mitra Kami",
     dragHint: "Geser untuk melihat lebih banyak",
     clients: [
       { id: "c1", name: "Kementerian Perindustrian RI" },
@@ -46,7 +46,7 @@ export const clientsPartnersCopy = {
   en: {
     tagline: "Trust & Collaboration",
     heading: "Our Clients & Partners",
-    clientsLabel: "Our Valuable Customer",
+    clientsLabel: "Our Valuable Customers",
     partnersLabel: "Our Partners",
     dragHint: "Drag to explore more",
     clients: [

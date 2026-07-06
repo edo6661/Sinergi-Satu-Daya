@@ -9,74 +9,74 @@ import {
 export const benefitsCopy = {
   id: {
     tagline: "Nilai Lebih untuk Bisnis Anda",
-    heading: "Layanan SSD Untuk Ekosistem Bisnis Anda",
+    heading: "Layanan SSD untuk Ekosistem Bisnis Anda",
     cta: "Jadwalkan Konsultasi Bisnis",
     items: [
       {
-        title: "Penjualan Kendaraan EV",
+        title: "Penjualan Kendaraan Listrik",
         description:
-          "Menyediakan berbagai jenis kendaraan listrik untuk dibeli sesuai kebutuhan operasional bisnis Anda.",
+          "Menyediakan berbagai jenis kendaraan listrik untuk dibeli sesuai dengan kebutuhan operasional bisnis Anda.",
         icon: CarFront,
       },
       {
-        title: "Rental B2B",
+        title: "Penyewaan B2B",
         description:
-          "Menyediakan kendaraan listrik untuk disewa sesuai kebutuhan operasional bisnis Anda.",
+          "Menyediakan fasilitas penyewaan kendaraan listrik yang fleksibel untuk mendukung operasional bisnis Anda.",
         icon: TrendingDown,
       },
       {
-        title: "Konsultasi EV B2B",
+        title: "Konsultasi Kendaraan Listrik B2B",
         description:
-          "Konsultasi EV B2B. Fokus utama untuk tranformasi kendaraan ke ev",
+          "Layanan konsultasi B2B dengan fokus utama pada transformasi armada konvensional menjadi kendaraan listrik.",
         icon: Users,
       },
       {
-        title: "Pemasangan EV Charger",
+        title: "Instalasi Pengisi Daya Kendaraan Listrik",
         description:
-          "Menyediakan barang dan jasa instalasi tempat pengisian daya kendaraan listrik",
+          "Menyediakan peralatan dan jasa instalasi stasiun pengisian daya kendaraan listrik untuk fasilitas Anda.",
         icon: PlugZap,
       },
       {
-        title: "Proteksi keamanan kendaraan listrik",
+        title: "Proteksi Keamanan Kendaraan Listrik",
         description:
-          "Sistem mitigasi kebakaran khusus baterai lithium (EV) di area pool dan charging station Anda.",
+          "Sistem mitigasi kebakaran khusus baterai litium (kendaraan listrik) di area pangkalan armada dan stasiun pengisian daya Anda.",
         icon: ShieldAlert,
       },
     ],
   },
   en: {
     tagline: "Value for Your Business",
-    heading: "SSD Ecosystem Services for Business",
-    cta: "Schedule Business Consultation",
+    heading: "SSD Ecosystem Services for Your Business",
+    cta: "Schedule a Business Consultation",
     items: [
       {
-        title: "EV Vehicle Sales",
+        title: "EV Sales",
         description:
-          "Providing a variety of electric vehicles for purchase to suit your business operational needs.",
+          "Providing a wide range of electric vehicles available for purchase to meet your business's operational needs.",
         icon: CarFront,
       },
       {
-        title: "B2B Rental",
+        title: "B2B Rentals",
         description:
-          "Providing electric vehicles for lease to suit your business operational needs.",
+          "Providing flexible electric vehicle leasing options tailored to suit your business operations.",
         icon: TrendingDown,
       },
       {
         title: "B2B EV Consulting",
         description:
-          "B2B EV consulting. Primary focus for the next 6 months to 1 year.",
+          "B2B EV consulting services, with a primary focus on fleet transformation over the next 6 to 12 months.",
         icon: Users,
       },
       {
         title: "EV Charger Installation",
         description:
-          "Charging station installation at your pool/warehouse, plus access to the SSD public network.",
+          "Charging station installation at your fleet pool or warehouse, including access to the SSD public network.",
         icon: PlugZap,
       },
       {
         title: "LFK Fire Safety",
         description:
-          "Specialized fire mitigation system for EV lithium batteries in your fleet pool and charging areas.",
+          "Specialized fire mitigation systems for EV lithium batteries in your fleet pools and charging areas.",
         icon: ShieldAlert,
       },
     ],
