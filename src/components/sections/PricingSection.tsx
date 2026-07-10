@@ -1,6 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { CheckCircle2 } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Grid3x3 } from 'lucide-react';
 import { pricingCopy, type PricingLanguage } from '../../data/copy/pricing';
 import { useAppLanguage } from '../../hooks/useAppLanguage';
 
@@ -127,6 +128,24 @@ export const PricingSection: React.FC<PricingSectionProps> = ({
             );
           })}
         </div>
+
+        {/* View All Layanan CTA */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.3 }}
+          className="text-center mt-16"
+        >
+          <Link
+            to="/layanan"
+            className="group inline-flex items-center justify-center gap-3 bg-white border border-border-light hover:border-accent text-primary hover:text-accent px-8 py-4 rounded-xl font-bold transition-all duration-300 shadow-sm hover:shadow-[0_12px_40px_rgba(245,158,11,0.18)] transform hover:-translate-y-1"
+          >
+            <Grid3x3 className="w-4 h-4 group-hover:scale-110 transition-transform" />
+            {lang === 'id' ? 'Lihat Semua Layanan' : 'View All Services'}
+            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+          </Link>
+        </motion.div>
       </div>
     </section>
   );

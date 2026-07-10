@@ -1,10 +1,10 @@
-import React, { useCallback, Suspense, lazy, useEffect, useState } from 'react';
+import React, { useCallback, Suspense, lazy, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { useAppLanguage } from '../hooks/useAppLanguage'; // Gunakan custom hook
-
-// HeroSection tetap import statis karena berada di Atas Lipatan (Above the Fold)
+import { useLocation, useNavigate } from 'react-router-dom';
+import { useAppLanguage } from '../hooks/useAppLanguage';
+import { SiteHeader } from '../components/layout/SiteHeader';
 import { HeroSection } from '../components/sections/HeroSection';
-import { Menu, X } from 'lucide-react';
+import { HOME_SECTIONS, scrollToSectionId, scrollToSectionWithRetry } from '../utils/scrollToSection';
 
 // Gunakan lazy load untuk komponen di bawah lipatan (Below the Fold)
 const CompanyProfileSection = lazy(() => import('../components/sections/CompanyProfileSection').then(m => ({ default: m.CompanyProfileSection })));
@@ -18,45 +18,26 @@ const ContactSection = lazy(() => import('../components/sections/ContactSection'
 const FloatingWhatsApp = lazy(() => import('../components/ui/FloatingWhatsApp').then(m => ({ default: m.FloatingWhatsApp })));
 
 export const LandingPage: React.FC = () => {
-  const { lang, i18n } = useAppLanguage(); // Ambil dari hook
+  const { lang } = useAppLanguage();
+  const location = useLocation();
+  const navigate = useNavigate();
 
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  // 2. Tambahkan listener untuk event scroll
   useEffect(() => {
-    const handleScroll = () => {
-      // Header akan berubah wujud setelah di-scroll sejauh 50px
-      setIsScrolled(window.scrollY > 50);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    const scrollTo = (location.state as { scrollTo?: string } | null)?.scrollTo;
+    if (!scrollTo) return;
+
+    scrollToSectionWithRetry(scrollTo, () => {
+      navigate('.', { replace: true, state: {} });
+    });
+  }, [location.state, navigate]);
 
   const scrollToSection = useCallback((sectionId: string) => {
-    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+    scrollToSectionId(sectionId);
   }, []);
 
   const scrollToContact = useCallback(() => {
-    scrollToSection('contact-section');
+    scrollToSection(HOME_SECTIONS.contact);
   }, [scrollToSection]);
-
-  const navLinks = [
-    { id: 'home-section', labelId: 'Beranda', labelEn: 'Home' },
-    { id: 'layanan-section', labelId: 'Layanan', labelEn: 'Services' },
-    { id: 'contact-section', labelId: 'Kontak', labelEn: 'Contact' },
-  ] as const;
-
-  const handleNavClick = (sectionId: string) => {
-    scrollToSection(sectionId);
-    setIsMobileMenuOpen(false);
-  };
-
-  const toggleLanguage = () => {
-    i18n.changeLanguage(lang === 'id' ? 'en' : 'id');
-  };
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
-  };
 
   return (
     <div className="min-h-screen bg-slate-50 font-sans">
@@ -84,85 +65,8 @@ export const LandingPage: React.FC = () => {
         <meta name="twitter:description" content={lang === 'id' ? 'Penjualan kendaraan EV, rental B2B, konsultasi EV, pemasangan EV charger, dan sistem fire safety LFK untuk bisnis Anda.' : 'EV vehicle sales, B2B rental, EV consulting, EV charger installation, and LFK fire safety systems for your business.'} />
         <meta name="twitter:image" content="https://www.sinergisatudaya.co.id/og-image.jpg" />
       </Helmet>
-      {/* Simple Sticky Header (Untuk Logo & Language Toggle) */}
-      <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-in-out ${isScrolled || isMobileMenuOpen
-          ? 'bg-surface-darkest/75 backdrop-blur-2xl border-b border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.3)] py-2'
-          : 'bg-transparent border-b border-transparent shadow-none py-5'
-          }`}
-      >
-        <div className="container mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
-          <div className="flex items-center gap-4 group cursor-pointer" onClick={() => window.scrollTo(0, 0)}>
-            <img
-              src="/logo/transparent-no-char.png"
-              alt="SSD Mobility"
-              className="h-14 md:h-20 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
-
-            />
-            <div className="flex flex-col">
-              <span className="text-surface-white font-black font-heading text-lg md:text-xl tracking-tight leading-none group-hover:text-accent transition-colors duration-300">MOBILITY</span>
-              <span className="text-content-light/60 text-[9px] md:text-[10px] font-bold tracking-[0.3em] leading-none mt-1.5">BY SINERGI SATU DAYA</span>
-            </div>
-          </div>
-
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
-            <nav className="flex items-center gap-6">
-              {navLinks.map((link) => (
-                <button
-                  key={link.id}
-                  onClick={() => handleNavClick(link.id)}
-                  className="text-xs font-bold text-content-light/70 hover:text-surface-white transition-colors tracking-widest"
-                >
-                  {lang === 'id' ? link.labelId : link.labelEn}
-                </button>
-              ))}
-            </nav>
-            <button onClick={toggleLanguage} className="text-xs font-bold text-content-light/70 hover:text-surface-white transition-colors tracking-widest flex items-center gap-1">
-              <span className={lang === 'id' ? 'text-accent' : ''}>ID</span>
-              <span className="text-white/20">/</span>
-              <span className={lang === 'en' ? 'text-accent' : ''}>EN</span>
-            </button>
-            <button onClick={scrollToContact} className="relative items-center justify-center bg-white/5 hover:bg-accent text-surface-white hover:text-surface-darkest border border-white/10 hover:border-accent px-6 py-2.5 rounded-lg text-xs font-bold transition-all duration-300 overflow-hidden group animate-shimmer">
-              <span className="relative z-10">{lang === 'id' ? 'HUBUNGI VIA WHATSAPP' : 'CONTACT VIA WHATSAPP'}</span>
-            </button>
-          </div>
-
-          {/* 4. Mobile Menu Toggle Button */}
-          <button
-            onClick={toggleMobileMenu}
-            className="md:hidden flex items-center justify-center p-2 text-surface-white hover:text-accent transition-colors"
-            aria-label="Toggle Menu"
-          >
-            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
-        </div>
-
-        {/* 5. Mobile Menu Dropdown (Animasi expand) */}
-        <div className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out bg-surface-darkest/95 backdrop-blur-xl border-b border-white/10 ${isMobileMenuOpen ? 'max-h-80 opacity-100' : 'max-h-0 opacity-0 border-transparent'}`}>
-          <div className="container mx-auto px-6 py-4 flex flex-col gap-4">
-            {navLinks.map((link) => (
-              <button
-                key={link.id}
-                onClick={() => handleNavClick(link.id)}
-                className="w-full text-left py-2 text-sm font-bold text-content-light hover:text-accent transition-colors tracking-widest"
-              >
-                {lang === 'id' ? link.labelId : link.labelEn}
-              </button>
-            ))}
-            <button onClick={toggleLanguage} className="w-full text-left py-2 text-sm font-bold text-content-light hover:text-accent transition-colors tracking-widest flex items-center gap-2">
-              <span>{lang === 'id' ? 'Bahasa:' : 'Language:'}</span>
-              <span className={lang === 'id' ? 'text-accent' : 'text-content-muted'}>ID</span>
-              <span className="text-white/20">/</span>
-              <span className={lang === 'en' ? 'text-accent' : 'text-content-muted'}>EN</span>
-            </button>
-            <button onClick={() => { scrollToContact(); toggleMobileMenu(); }} className="w-full bg-accent text-surface-darkest py-3 rounded-lg text-sm font-bold tracking-widest animate-shimmer">
-              {lang === 'id' ? 'HUBUNGI VIA WHATSAPP' : 'CONTACT VIA WHATSAPP'}
-            </button>
-          </div>
-        </div>
-      </header>
-      <div id="home-section">
+      <SiteHeader />
+      <div id={HOME_SECTIONS.home}>
         <HeroSection
           onPrimaryClick={scrollToContact}
           onSecondaryClick={() => scrollToSection('profile-section')}
@@ -185,14 +89,14 @@ export const LandingPage: React.FC = () => {
         </div>
         <BusinessBenefits onCalculateClick={scrollToContact} />
         <FleetShowcase onCheckAvailabilityClick={scrollToContact} />
-        <div id="layanan-section">
+        <div id={HOME_SECTIONS.layanan}>
           <PricingSection onPlanSelect={scrollToContact} />
         </div>
         <BusinessFaq onContactClick={scrollToContact} />
         <ProjectSuccessSection onCtaClick={scrollToContact} />
         <ClientsPartnersSection />
 
-        <div id="contact-section">
+        <div id={HOME_SECTIONS.contact}>
           <ContactSection onSubmit={(data) => {
             console.log("Form Submitted:", data);
             alert(lang === 'id' ? 'Terima kasih, permintaan Anda telah kami terima.' : 'Thank you, your request has been received.');
@@ -207,12 +111,14 @@ export const LandingPage: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-12 gap-10 mb-16">
 
               {/* Info Perusahaan */}
-              <div className="md:col-span-5 flex flex-col items-center md:items-start">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 bg-accent rounded-xl flex items-center justify-center text-surface-darkest font-black">
-                    SSD
-                  </div>
-                  <span className="text-surface-white font-heading font-black text-xl tracking-tighter">SSD MOBILITY</span>
+              <div className="md:col-span-5 flex flex-col items-center md:items-start gap-4">
+                <div>
+                  <img
+                    src="/logo/transparent-no-char.png"
+                    alt="SSD Mobility"
+                    className="h-14 md:h-20 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
+
+                  />
                 </div>
                 <p className="text-sm max-w-sm text-center md:text-left leading-relaxed font-medium">
                   {lang === 'id'

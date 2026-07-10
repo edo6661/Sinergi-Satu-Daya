@@ -4,7 +4,7 @@ import tailwindcss from "@tailwindcss/vite";
 import viteCompression from "vite-plugin-compression";
 import Sitemap from "vite-plugin-sitemap";
 
-const dynamicRoutes: string[] = [];
+const dynamicRoutes: string[] = ["/layanan"];
 
 export default defineConfig({
   plugins: [

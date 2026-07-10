@@ -1,6 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Calculator } from 'lucide-react';
+import { Calculator, ArrowRight } from 'lucide-react';
 import { benefitsCopy } from '../../data/copy/benefits';
 import { useAppLanguage } from '../../hooks/useAppLanguage';
 
@@ -74,34 +75,40 @@ export const BusinessBenefits: React.FC<BusinessBenefitsProps> = ({
           viewport={{ once: true, margin: "-40px" }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20"
         >
-          {content.items.map((item, index) => {
+          {content.items.map((item) => {
             const Icon = item.icon;
             return (
               <motion.div
-                key={index}
+                key={item.slug}
                 variants={itemVariants}
-                className="group relative glass-card p-8 rounded-[2.2rem] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_25px_50px_rgba(0,0,0,0.5)] hover:border-accent/40 flex flex-col h-full overflow-hidden bg-surface-darkest/20"
               >
-                {/* Internal Card Geometric Ray Overlay */}
-                <div className="absolute -right-10 -top-10 w-36 h-36 bg-accent/5 rounded-full blur-2xl group-hover:bg-accent/15 transition-all duration-700 ease-out" />
+                <Link
+                  to={`/layanan/${item.slug}`}
+                  className="group relative glass-card p-8 rounded-[2.2rem] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_25px_50px_rgba(0,0,0,0.5)] hover:border-accent/40 flex flex-col h-full overflow-hidden bg-surface-darkest/20 block"
+                >
+                  <div className="absolute -right-10 -top-10 w-36 h-36 bg-accent/5 rounded-full blur-2xl group-hover:bg-accent/15 transition-all duration-700 ease-out" />
 
-                <div className="relative z-10 flex-grow flex flex-col">
-                  {/* High-Tech Icon Container */}
-                  <div className="mb-8 inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-surface-darkest/60 backdrop-blur-md border border-white/10 group-hover:border-accent/40 group-hover:scale-105 group-hover:shadow-[0_0_20px_rgba(245,158,11,0.2)] transition-all duration-500 shadow-inner">
-                    <Icon className="w-5 h-5 text-accent group-hover:rotate-3 transition-transform" />
+                  <div className="relative z-10 flex-grow flex flex-col">
+                    <div className="mb-8 inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-surface-darkest/60 backdrop-blur-md border border-white/10 group-hover:border-accent/40 group-hover:scale-105 group-hover:shadow-[0_0_20px_rgba(245,158,11,0.2)] transition-all duration-500 shadow-inner">
+                      <Icon className="w-5 h-5 text-accent group-hover:rotate-3 transition-transform" />
+                    </div>
+
+                    <h3 className="text-xl font-bold mb-4 text-surface-white group-hover:text-accent transition-colors duration-300 tracking-tight leading-snug">
+                      {item.title}
+                    </h3>
+
+                    <div className="w-6 h-[2px] bg-white/10 mb-5 group-hover:bg-accent group-hover:w-12 transition-all duration-500 ease-out" />
+
+                    <p className="text-content-light/70 leading-relaxed text-sm group-hover:text-content-inverse transition-colors duration-300 font-medium flex-grow">
+                      {item.description}
+                    </p>
+
+                    <div className="inline-flex items-center gap-2 mt-6 text-xs font-bold text-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      {lang === 'id' ? 'Lihat Detail' : 'View Details'}
+                      <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                    </div>
                   </div>
-
-                  <h3 className="text-xl font-bold mb-4 text-surface-white group-hover:text-accent transition-colors duration-300 tracking-tight leading-snug">
-                    {item.title}
-                  </h3>
-
-                  {/* Sleek Line Accent */}
-                  <div className="w-6 h-[2px] bg-white/10 mb-5 group-hover:bg-accent group-hover:w-12 transition-all duration-500 ease-out" />
-
-                  <p className="text-content-light/70 leading-relaxed text-sm group-hover:text-content-inverse transition-colors duration-300 font-medium">
-                    {item.description}
-                  </p>
-                </div>
+                </Link>
               </motion.div>
             );
           })}
