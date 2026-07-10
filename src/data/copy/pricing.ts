@@ -20,7 +20,7 @@ export const pricingCopy = {
       {
         id: "corporate",
         name: "Penyewaan B2B",
-        price: "Mulai Rp 5 Juta",
+        price: "Mulai Dari Rp 5 Juta",
         description:
           "Sewa kendaraan listrik untuk kebutuhan operasional bisnis dengan biaya bulanan yang dapat diprediksi.",
         features: [

@@ -11,7 +11,7 @@ export interface ProjectSuccessItem {
 export const projectSuccessCopy = {
   id: {
     tagline: "Bukti Eksekusi di Lapangan",
-    heading: "Keberhasilan Proyek",
+    heading: "Portofolio",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ringkasan portofolio proyek SSD Mobility yang telah berhasil dijalankan bersama mitra strategis kami.",
     readMore: "Lihat Detail",
@@ -61,7 +61,7 @@ export const projectSuccessCopy = {
   },
   en: {
     tagline: "Proven Track Record",
-    heading: "Project Success",
+    heading: "Portofolios",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. A snapshot of SSD Mobility's project portfolio, successfully delivered alongside our strategic partners.",
     readMore: "View Details",
