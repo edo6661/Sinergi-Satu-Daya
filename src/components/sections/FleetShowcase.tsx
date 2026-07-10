@@ -1,43 +1,158 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Search, Zap } from 'lucide-react';
-import { fleetCopy, fleetData, type FleetCategory } from '../../data/copy/fleet';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
+import { ChevronLeft, ChevronRight, Search, ArrowRight } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
+import { fleetCopy, fleetSliderItems, type FleetCategory } from '../../data/copy/fleet';
+import { EV_SALES_SLUG } from '../../data/catalog/services';
 import { useAppLanguage } from '../../hooks/useAppLanguage';
 
 interface FleetShowcaseProps {
   onCheckAvailabilityClick?: () => void;
 }
 
+type FleetSliderItem = (typeof fleetSliderItems)[number];
+
+type FleetCategoryCardProps = {
+  item: FleetSliderItem;
+  label: string;
+  onClick: () => void;
+  className?: string;
+};
+
+const FleetCategoryCard = ({ item, label, onClick, className = '' }: FleetCategoryCardProps) => (
+  <button
+    type="button"
+    onClick={onClick}
+    className={`group relative w-full aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-[0_15px_35px_rgba(0,0,0,0.08)] hover:shadow-[0_30px_60px_rgba(0,0,0,0.18)] border border-border-light/40 bg-surface-darkest cursor-pointer text-left ${className}`}
+  >
+    <img
+      src={item.image}
+      alt={label}
+      className="w-full h-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-110 opacity-75 group-hover:opacity-90"
+      loading="lazy"
+      draggable={false}
+    />
+    <div className="absolute inset-0 bg-gradient-to-t from-surface-darkest via-surface-darkest/30 to-transparent opacity-90" />
+    <div className="absolute inset-x-0 bottom-0 p-6 md:p-8">
+      <div className="glass-card border-white/15 p-6 rounded-[1.75rem] shadow-2xl translate-y-2 group-hover:translate-y-0 transition-all duration-500 hover:border-accent/40 bg-surface-darkest/30">
+        <h3 className="text-surface-white text-2xl font-black tracking-tight font-heading group-hover:text-accent transition-colors duration-300 mb-3">
+          {label}
+        </h3>
+        <span className="inline-flex items-center gap-2 text-sm font-bold text-surface-white/90 group-hover:text-accent transition-colors">
+          Lihat Katalog
+          <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+        </span>
+      </div>
+    </div>
+  </button>
+);
+
 export const FleetShowcase: React.FC<FleetShowcaseProps> = ({
   onCheckAvailabilityClick
 }) => {
   const { lang } = useAppLanguage();
   const content = fleetCopy[lang];
-  const [activeFilter, setActiveFilter] = useState<FleetCategory>('all');
+  const navigate = useNavigate();
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [isDragging, setIsDragging] = useState(false);
 
-  const filteredFleet = fleetData.filter(
-    (car) => activeFilter === 'all' || car.category === activeFilter
-  );
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const dragRef = useRef({ startX: 0, scrollLeft: 0, moved: false });
+
+  const handleCategoryClick = (categoryId: string) => {
+    navigate(`/layanan/${EV_SALES_SLUG}?category=${categoryId}`);
+  };
+
+  const getLabel = (key: FleetSliderItem['key']) =>
+    content.filters[key as FleetCategory];
+
+  const updateActiveIndexFromScroll = useCallback(() => {
+    const container = scrollRef.current;
+    if (!container || container.children.length === 0) return;
+
+    const containerCenter = container.scrollLeft + container.clientWidth / 2;
+    let closestIndex = 0;
+    let closestDistance = Infinity;
+
+    Array.from(container.children).forEach((child, index) => {
+      const slide = child as HTMLElement;
+      const slideCenter = slide.offsetLeft + slide.offsetWidth / 2;
+      const distance = Math.abs(containerCenter - slideCenter);
+      if (distance < closestDistance) {
+        closestDistance = distance;
+        closestIndex = index;
+      }
+    });
+
+    setActiveIndex(closestIndex);
+  }, []);
+
+  const scrollToIndex = useCallback((index: number) => {
+    const container = scrollRef.current;
+    if (!container) return;
+
+    const slide = container.children[index] as HTMLElement | undefined;
+    if (!slide) return;
+
+    container.scrollTo({
+      left: slide.offsetLeft - (container.clientWidth - slide.offsetWidth) / 2,
+      behavior: 'smooth',
+    });
+    setActiveIndex(index);
+  }, []);
+
+  const goToSlide = (index: number) => {
+    scrollToIndex((index + fleetSliderItems.length) % fleetSliderItems.length);
+  };
+
+  const onPointerDown = (e: React.PointerEvent<HTMLDivElement>) => {
+    const container = scrollRef.current;
+    if (!container) return;
+
+    dragRef.current = {
+      startX: e.clientX,
+      scrollLeft: container.scrollLeft,
+      moved: false,
+    };
+    setIsDragging(true);
+    container.setPointerCapture(e.pointerId);
+  };
+
+  const onPointerMove = (e: React.PointerEvent<HTMLDivElement>) => {
+    const container = scrollRef.current;
+    if (!container || !container.hasPointerCapture(e.pointerId)) return;
+
+    const dx = e.clientX - dragRef.current.startX;
+    if (Math.abs(dx) > 4) dragRef.current.moved = true;
+    container.scrollLeft = dragRef.current.scrollLeft - dx;
+  };
+
+  const onPointerUp = (e: React.PointerEvent<HTMLDivElement>) => {
+    const container = scrollRef.current;
+    if (!container) return;
+
+    if (container.hasPointerCapture(e.pointerId)) {
+      container.releasePointerCapture(e.pointerId);
+    }
+    setIsDragging(false);
+    updateActiveIndexFromScroll();
+  };
+
+  useEffect(() => {
+    const container = scrollRef.current;
+    if (!container) return;
+
+    const onScroll = () => updateActiveIndexFromScroll();
+    container.addEventListener('scroll', onScroll, { passive: true });
+    return () => container.removeEventListener('scroll', onScroll);
+  }, [updateActiveIndexFromScroll]);
 
   return (
     <section className="py-24 bg-surface-light text-content-main relative overflow-hidden">
-      {/* Subtle Pattern Background */}
       <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(#000_1px,transparent_1px)] [background-size:32px_32px]" />
-
-      {/* Glow Ambient behind section */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[50rem] h-[50rem] bg-accent/5 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="container mx-auto px-6 lg:px-12 relative z-10">
-
-        {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 mb-4">
-            <span className="w-8 h-px bg-primary/30" />
-            <span className="text-primary font-bold tracking-widest text-xs uppercase">
-              {content.tagline}
-            </span>
-            <span className="w-8 h-px bg-primary/30" />
-          </div>
           <h2 className="text-3xl md:text-5xl font-black font-heading text-primary mb-6 tracking-tight leading-tight">
             {content.heading}
           </h2>
@@ -46,80 +161,76 @@ export const FleetShowcase: React.FC<FleetShowcaseProps> = ({
           </p>
         </div>
 
-        {/* Premium Pill Filters dengan Animasi Sliding */}
-        <div className="flex flex-wrap justify-center gap-2 mb-20 p-2 bg-white/60 backdrop-blur-md shadow-[0_12px_40px_rgba(0,0,0,0.03)] rounded-full border border-border-light w-fit mx-auto relative z-20">
-          {(Object.keys(content.filters) as FleetCategory[]).map((filter) => {
-            const isActive = activeFilter === filter;
-            return (
-              <button
-                key={filter}
-                onClick={() => setActiveFilter(filter)}
-                className={`relative px-8 py-3 rounded-full text-sm font-bold transition-colors duration-300 outline-none cursor-pointer z-10 ${isActive ? 'text-surface-white' : 'text-content-muted hover:text-primary'
-                  }`}
-              >
-                {isActive && (
-                  <motion.div
-                    layoutId="activeFleetFilter"
-                    className="absolute inset-0 bg-surface-darkest rounded-full shadow-md -z-10"
-                    transition={{ type: "spring", stiffness: 380, damping: 30 }}
-                  />
-                )}
-                {content.filters[filter]}
-              </button>
-            );
-          })}
+        {/* Grid — md ke atas */}
+        <div className="hidden lg:grid lg:grid-cols-3 gap-8 mb-20">
+          {fleetSliderItems.map((item) => (
+            <FleetCategoryCard
+              key={item.categoryId}
+              item={item}
+              label={getLabel(item.key)}
+              onClick={() => handleCategoryClick(item.categoryId)}
+            />
+          ))}
         </div>
 
-        {/* Fleet Grid */}
-        <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-          <AnimatePresence mode="popLayout">
-            {filteredFleet.map((vehicle) => (
-              <motion.div
-                key={vehicle.id}
-                layout
-                initial={{ opacity: 0, y: 20, scale: 0.95 }}
-                animate={{ opacity: 1, y: 0, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.95 }}
-                transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-                className="group relative rounded-[2.5rem] overflow-hidden shadow-[0_15px_35px_rgba(0,0,0,0.04)] hover:shadow-[0_30px_60px_rgba(0,0,0,0.18)] border border-border-light/40 bg-surface-darkest aspect-[4/5] cursor-pointer transition-all duration-500"
-              >
-                <img
-                  src={vehicle.image}
-                  alt={vehicle.name}
-                  className="w-full h-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-110 opacity-75 group-hover:opacity-90"
-                  loading="lazy"
+        {/* Slider — di bawah lg, bisa di-grab */}
+        <div className="lg:hidden relative mb-20">
+          <div
+            ref={scrollRef}
+            onPointerDown={onPointerDown}
+            onPointerMove={onPointerMove}
+            onPointerUp={onPointerUp}
+            onPointerCancel={onPointerUp}
+            className={`flex gap-4 overflow-x-auto snap-x snap-mandatory scrollbar-none px-1 pb-2 select-none touch-pan-x ${isDragging ? 'cursor-grabbing' : 'cursor-grab'
+              }`}
+            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+          >
+            {fleetSliderItems.map((item) => (
+              <div key={item.categoryId} className="snap-center shrink-0 w-[85vw] max-w-sm">
+                <FleetCategoryCard
+                  item={item}
+                  label={getLabel(item.key)}
+                  onClick={() => {
+                    if (!dragRef.current.moved) {
+                      handleCategoryClick(item.categoryId);
+                    }
+                  }}
                 />
-
-                {/* Dramatic Vignette Layer */}
-                <div className="absolute inset-0 bg-gradient-to-t from-surface-darkest via-surface-darkest/30 to-transparent opacity-90 transition-opacity duration-500" />
-
-                {/* Content Overlay */}
-                <div className="absolute inset-x-0 bottom-0 p-6 md:p-8 transform transition-all duration-500">
-                  <div className="glass-card border-white/15 p-6 rounded-[1.75rem] shadow-2xl translate-y-2 group-hover:translate-y-0 transition-all duration-500 hover:border-accent/40 bg-surface-darkest/30">
-                    <div className="flex justify-between items-start mb-4">
-                      <div>
-                        <p className="text-accent text-[10px] font-black uppercase tracking-[0.25em] mb-2">{content.filters[vehicle.category as FleetCategory] || vehicle.category}</p>
-                        <h3 className="text-surface-white text-2xl font-black tracking-tight font-heading group-hover:text-accent transition-colors duration-300">
-                          {vehicle.name}
-                        </h3>
-                      </div>
-                    </div>
-
-                    <div className="flex items-center gap-4 text-content-light/90 text-sm border-t border-white/5 pt-4">
-                      <div className="flex items-center gap-2 bg-surface-darkest/60 px-4 py-2 rounded-xl border border-white/10 backdrop-blur-sm shadow-inner group-hover:border-accent/30 transition-colors duration-300">
-                        <Zap className="w-4 h-4 text-accent animate-pulse" />
-                        <span className="text-[10px] font-bold uppercase tracking-wider text-content-light/60">Max Range</span>
-                        <span className="font-black text-surface-white font-heading text-xs tracking-wide">{vehicle.range}</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
+              </div>
             ))}
-          </AnimatePresence>
-        </motion.div>
+          </div>
 
-        {/* CTA Button */}
+          <button
+            type="button"
+            onClick={() => goToSlide(activeIndex - 1)}
+            aria-label="Slide sebelumnya"
+            className="absolute left-0 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/90 backdrop-blur-md border border-border-light shadow-md flex items-center justify-center text-primary hover:text-accent hover:border-accent/40 transition-colors cursor-pointer z-10"
+          >
+            <ChevronLeft className="w-5 h-5" />
+          </button>
+          <button
+            type="button"
+            onClick={() => goToSlide(activeIndex + 1)}
+            aria-label="Slide berikutnya"
+            className="absolute right-0 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/90 backdrop-blur-md border border-border-light shadow-md flex items-center justify-center text-primary hover:text-accent hover:border-accent/40 transition-colors cursor-pointer z-10"
+          >
+            <ChevronRight className="w-5 h-5" />
+          </button>
+
+          <div className="flex justify-center gap-3 mt-6">
+            {fleetSliderItems.map((item, index) => (
+              <button
+                key={item.categoryId}
+                type="button"
+                onClick={() => scrollToIndex(index)}
+                aria-label={getLabel(item.key)}
+                className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${index === activeIndex ? 'w-8 bg-primary' : 'w-2 bg-primary/25 hover:bg-primary/50'
+                  }`}
+              />
+            ))}
+          </div>
+        </div>
+
         <div className="text-center relative z-20">
           <button
             onClick={onCheckAvailabilityClick}
@@ -129,7 +240,6 @@ export const FleetShowcase: React.FC<FleetShowcaseProps> = ({
             {content.cta}
           </button>
         </div>
-
       </div>
     </section>
   );

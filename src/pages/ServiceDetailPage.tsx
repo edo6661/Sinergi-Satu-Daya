@@ -1,5 +1,5 @@
 import { useEffect, useLayoutEffect, useState } from 'react';
-import { Link, useParams, Navigate } from 'react-router-dom';
+import { Link, useParams, Navigate, useSearchParams } from 'react-router-dom';
 import { ArrowRight, CheckCircle2, ChevronRight, MessageSquare } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { PageLayout } from '../components/layout/PageLayout';
@@ -15,6 +15,7 @@ import {
 import { layananPageCopy } from '../data/copy/layananPage';
 import { useAppLanguage } from '../hooks/useAppLanguage';
 import { restoreScrollPosition, saveScrollPosition } from '../utils/scrollRestoration';
+import { scrollToSectionWithRetry } from '../utils/scrollToSection';
 
 const WHATSAPP_NUMBER = '628110000000';
 
@@ -26,6 +27,7 @@ type ServiceProductCatalogProps = {
   content: (typeof layananPageCopy)[keyof typeof layananPageCopy];
   lang: 'id' | 'en';
   onProductNavigate: () => void;
+  initialCategory?: string | null;
 };
 
 const ServiceProductCatalog = ({
@@ -36,9 +38,19 @@ const ServiceProductCatalog = ({
   content,
   lang,
   onProductNavigate,
+  initialCategory,
 }: ServiceProductCatalogProps) => {
-  const [activeCategory, setActiveCategory] = useState<string>('all');
+  const resolvedInitialCategory =
+    initialCategory && serviceCategories.some((cat) => cat.id === initialCategory)
+      ? initialCategory
+      : 'all';
+  const [activeCategory, setActiveCategory] = useState<string>(resolvedInitialCategory);
   const showCategoryFilters = serviceCategories.length > 1;
+
+  useEffect(() => {
+    if (resolvedInitialCategory === 'all') return;
+    scrollToSectionWithRetry('ev-product-catalog');
+  }, [resolvedInitialCategory]);
 
   const filteredProducts =
     activeCategory === 'all'
@@ -46,7 +58,7 @@ const ServiceProductCatalog = ({
       : serviceProducts.filter((p) => p.categoryId === activeCategory);
 
   return (
-    <div>
+    <div id="ev-product-catalog">
       <div className="text-center mb-12">
         <h2 className="text-2xl md:text-3xl font-black font-heading text-surface-white mb-4">
           {catalogTitle}
@@ -138,6 +150,8 @@ const ServiceProductCatalog = ({
 
 const ServiceDetailPage = () => {
   const { serviceSlug } = useParams();
+  const [searchParams] = useSearchParams();
+  const categoryParam = searchParams.get('category');
   const { lang } = useAppLanguage();
   const content = layananPageCopy[lang];
 
@@ -150,13 +164,13 @@ const ServiceDetailPage = () => {
     : `${lang === 'id' ? 'Layanan tidak ditemukan' : 'Service not found'} | SSD Mobility`;
 
   useEffect(() => {
-    if (!serviceSlug) return;
+    if (!serviceSlug || categoryParam) return;
 
     const path = `/layanan/${resolvedServiceSlug ?? serviceSlug}`;
     if (!restoreScrollPosition(path)) {
       window.scrollTo(0, 0);
     }
-  }, [serviceSlug, resolvedServiceSlug]);
+  }, [serviceSlug, resolvedServiceSlug, categoryParam]);
 
   useLayoutEffect(() => {
     document.title = pageTitle;
@@ -274,7 +288,7 @@ const ServiceDetailPage = () => {
 
           {service.hasProductCatalog && serviceProducts.length > 0 && (
             <ServiceProductCatalog
-              key={resolvedServiceSlug}
+              key={`${resolvedServiceSlug}-${categoryParam ?? 'all'}`}
               serviceProducts={serviceProducts}
               serviceCategories={serviceCategories}
               catalogTitle={catalogTitle}
@@ -282,6 +296,7 @@ const ServiceDetailPage = () => {
               content={content}
               lang={lang}
               onProductNavigate={handleProductNavigate}
+              initialCategory={categoryParam}
             />
           )}
 

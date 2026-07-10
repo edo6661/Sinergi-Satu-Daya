@@ -9,7 +9,7 @@ export const fleetCopy = {
       all: "Semua Armada",
       twoWheel: "Roda 2",
       passenger: "Mobil Penumpang",
-      commercial: "Niaga / Logistik",
+      commercial: "Niaga & Logistik",
     },
   },
   en: {
@@ -29,6 +29,24 @@ export const fleetCopy = {
 
 export type FleetLanguage = keyof typeof fleetCopy;
 export type FleetCategory = "all" | "twoWheel" | "passenger" | "commercial";
+
+export const fleetSliderItems = [
+  {
+    key: "twoWheel" as const,
+    categoryId: "two-wheel",
+    image: "/company-profile/ev-ecosystem.jpg",
+  },
+  {
+    key: "passenger" as const,
+    categoryId: "passenger",
+    image: "/cars/wuling-binguo-ev.jpg",
+  },
+  {
+    key: "commercial" as const,
+    categoryId: "commercial",
+    image: "/cars/dfsk-gelora-e.jpg",
+  },
+] as const;
 
 export const fleetData = [
   {
