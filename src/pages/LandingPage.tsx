@@ -92,9 +92,9 @@ export const LandingPage: React.FC = () => {
         <div id={HOME_SECTIONS.layanan}>
           <PricingSection onPlanSelect={scrollToContact} />
         </div>
-        <BusinessFaq onContactClick={scrollToContact} />
         <ProjectSuccessSection onCtaClick={scrollToContact} />
         <ClientsPartnersSection />
+        <BusinessFaq onContactClick={scrollToContact} />
 
         <div id={HOME_SECTIONS.contact}>
           <ContactSection onSubmit={(data) => {

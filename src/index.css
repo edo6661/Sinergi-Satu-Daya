@@ -83,6 +83,8 @@
   }
 }
 .text-gradient-accent {
+  display: inline-block;
+  padding-right: 0.12em;
   background: linear-gradient(
     135deg,
     var(--color-accent) 0%,
@@ -90,7 +92,9 @@
     #fb923c 100%
   );
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
+  color: transparent;
   background-size: 200% auto;
   animation: shine 4s linear infinite;
 }

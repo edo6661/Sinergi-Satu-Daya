@@ -41,9 +41,9 @@ export const ProjectSuccessSection: React.FC<ProjectSuccessSectionProps> = ({
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-3xl md:text-5xl font-black font-heading tracking-tight leading-tight mb-6"
+            className="text-3xl md:text-5xl font-black font-heading tracking-tight leading-tight mb-6 italic"
           >
-            <span className="text-gradient-accent italic">{content.heading}</span>
+            <span className="text-gradient-accent">{content.heading}</span>
           </motion.h2>
 
           <motion.p
