@@ -15,8 +15,8 @@ export const layananPageCopy = {
   },
   en: {
     badge: "SSD Services",
-    title: "Complete EV",
-    titleHighlight: "Solutions for Business",
+    title: "Electric Vehicle Solutions",
+    titleHighlight: "Complete for Business",
     viewDetails: "View Details",
     breadcrumbHome: "Home",
     breadcrumbLayanan: "Services",
