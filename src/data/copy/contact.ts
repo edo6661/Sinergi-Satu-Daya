@@ -1,4 +1,4 @@
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { MapPin, Mail } from "lucide-react";
 
 export const contactCopy = {
   id: {
@@ -10,28 +10,14 @@ export const contactCopy = {
       details: [
         {
           icon: MapPin,
-          title: "Kantor Pusat",
-          desc: "Gedung SSD Tower, SCBD, Jakarta Selatan",
+          title: "Alamat",
+          desc: "Tower One, TCC Batavia, 5th Floor, Jl. K.H. Mas Mansyur, Karet Tengsin, Kec. Tanah Abang, Kota Jakarta Pusat",
         },
+
         {
-          icon: MapPin,
-          title: "Gudang & Pangkalan Armada Listrik",
-          desc: "Kawasan Industri Jatake, Tangerang, Banten",
-        },
-        {
-          icon: Phone,
-          title: "Hotline B2B",
-          desc: "+62 812 3456 7890 (Tersedia WhatsApp)",
-        },
-        { 
-          icon: Mail, 
-          title: "Email", 
-          desc: "b2b@sinergisatudaya.co.id" 
-        },
-        {
-          icon: Clock,
-          title: "Jam Operasional",
-          desc: "Senin - Jumat: 08.00 - 17.00 WIB",
+          icon: Mail,
+          title: "Email",
+          desc: "support@sinergisatudaya.com",
         },
       ],
     },
@@ -50,7 +36,8 @@ export const contactCopy = {
         placeholder: "Pilih Jenis Layanan",
         passenger: "Penjualan Kendaraan Listrik",
         commercial: "Penyewaan B2B",
-        custom: "Konsultasi / Infrastruktur Kendaraan Listrik (Pengisi Daya & LFK)",
+        custom:
+          "Konsultasi / Infrastruktur Kendaraan Listrik (Pengisi Daya & LFK)",
       },
       submit: "Kirim Permintaan",
     },
@@ -64,28 +51,13 @@ export const contactCopy = {
       details: [
         {
           icon: MapPin,
-          title: "Head Office",
-          desc: "SSD Tower, SCBD, South Jakarta",
+          title: "Address",
+          desc: "Tower One, TCC Batavia, Lt.5, Jl. K.H. Mas Mansyur, Karet Tengsin, Kec. Tanah Abang, Kota Jakarta Pusat",
         },
         {
-          icon: MapPin,
-          title: "EV Warehouse & Fleet Pool",
-          desc: "Jatake Industrial Estate, Tangerang, Banten",
-        },
-        {
-          icon: Phone,
-          title: "B2B Hotline",
-          desc: "+62 812 3456 7890 (WhatsApp Available)",
-        },
-        { 
-          icon: Mail, 
-          title: "Email", 
-          desc: "b2b@sinergisatudaya.co.id" 
-        },
-        {
-          icon: Clock,
-          title: "Business Hours",
-          desc: "Monday - Friday: 08.00 - 17.00 WIB",
+          icon: Mail,
+          title: "Email",
+          desc: "support@sinergisatudaya.com",
         },
       ],
     },
@@ -120,4 +92,4 @@ export interface LeadFormData {
   vehicleType: string;
   unitCount: string;
   location: string;
-} 
+}
