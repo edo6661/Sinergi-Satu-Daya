@@ -27,7 +27,7 @@ const FleetCategoryCard = ({ item, label, onClick, className = '' }: FleetCatego
     <img
       src={item.image}
       alt={label}
-      className="w-full h-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-110 opacity-75 group-hover:opacity-90"
+      className="w-full h-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-110"
       loading="lazy"
       draggable={false}
     />
