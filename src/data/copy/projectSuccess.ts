@@ -12,7 +12,7 @@ export const projectSuccessCopy = {
     tagline: "Bukti Eksekusi di Lapangan",
     heading: "Portofolio",
     description:
-      "Bukti nyata keberhasilan SSD Mobility dalam menghadirkan solusi kendaraan listrik, pengadaan armada, dan layanan mobilitas yang efisien, aman, dan berkelanjutan untuk berbagai kebutuhan industri.",
+      "Bukti nyata keberhasilan SSD dalam menghadirkan solusi kendaraan listrik, pengadaan armada, dan layanan mobilitas yang efisien, aman, dan berkelanjutan untuk berbagai kebutuhan industri.",
     readMore: "Lihat Detail",
     cta: "Diskusikan Proyek Anda",
     projects: [

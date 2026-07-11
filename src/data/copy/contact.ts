@@ -1,4 +1,4 @@
-import { MapPin, Mail } from "lucide-react";
+import { MapPin, Mail, Phone } from "lucide-react";
 
 export const contactCopy = {
   id: {
@@ -13,11 +13,15 @@ export const contactCopy = {
           title: "Alamat",
           desc: "Tower One, TCC Batavia, 5th Floor, Jl. K.H. Mas Mansyur, Karet Tengsin, Kec. Tanah Abang, Kota Jakarta Pusat",
         },
-
         {
           icon: Mail,
           title: "Email",
           desc: "support@sinergisatudaya.com",
+        },
+        {
+          icon: Phone,
+          title: "Telepon",
+          desc: "+62 812-3456-7890",
         },
       ],
     },
@@ -58,6 +62,11 @@ export const contactCopy = {
           icon: Mail,
           title: "Email",
           desc: "support@sinergisatudaya.com",
+        },
+        {
+          icon: Phone,
+          title: "Phone",
+          desc: "+62 812-3456-7890",
         },
       ],
     },

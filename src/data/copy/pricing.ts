@@ -36,9 +36,10 @@ export const pricingCopy = {
       {
         id: "end-to-end",
         name: "Penjualan & Infrastruktur Kendaraan Listrik",
-        price: "Custom Pricing",
+        price: "Harga Custom",
+
         description:
-          "Penjualan kendaraan listrik lengkap dengan instalasi stasiun pengisian daya dan sistem proteksi kebakaran LFK.",
+          "Penjualan kendaraan listrik lengkap dengan instalasi stasiun pengisian daya dan sistem proteksi kebakaran.",
         features: [
           "Pengadaan Unit Kepemilikan",
           "Instalasi Stasiun Pengisian Daya",
@@ -62,10 +63,7 @@ export const pricingCopy = {
         price: "Contact Us",
         description:
           "B2B EV consulting for businesses. Primary focus targets fleet transformations for the next 6 to 12 months.",
-        features: [
-          "B2B EV Consulting",
-          "Focus on the next 6 to 12 months",
-        ],
+        features: ["B2B EV Consulting", "Focus on the next 6 to 12 months"],
         cta: "Select Plan",
         isPopular: false,
       },
