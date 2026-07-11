@@ -20,14 +20,14 @@ const LayananPage = () => {
       <Helmet>
         <title>
           {lang === 'id'
-            ? 'Layanan EV B2B | SSD Mobility'
+            ? 'Layanan Kendaraan Listrik B2B | SSD Mobility'
             : 'B2B EV Services | SSD Mobility'}
         </title>
         <meta
           name="description"
           content={
             lang === 'id'
-              ? 'Layanan SSD: penjualan kendaraan listrik, penyewaan B2B, konsultasi EV, instalasi charger, dan proteksi keamanan kendaraan listrik.'
+              ? 'Layanan SSD: penjualan kendaraan listrik, penyewaan B2B, konsultasi kendaraan listrik, instalasi charger, dan proteksi keamanan kendaraan listrik.'
               : 'SSD services: EV sales, B2B rentals, EV consulting, charger installation, and EV safety protection.'
           }
         />

@@ -56,7 +56,7 @@ export const layananCategories: LayananCategory[] = [
   {
     id: "charger",
     slug: "charger",
-    name: { id: "EV Charger", en: "EV Chargers" },
+    name: { id: "Pengisi Daya Kendaraan Listrik", en: "EV Chargers" },
     description: {
       id: "Stasiun pengisian daya AC dan DC untuk infrastruktur kendaraan listrik.",
       en: "AC and DC charging stations for EV infrastructure.",
@@ -536,7 +536,7 @@ export const layananProducts: LayananProduct[] = [
     brand: "LFK HARTINDO",
     title: { id: "LFK AF31 Portable — 3 KG", en: "LFK AF31 Portable — 3 KG" },
     description: {
-      id: "Pemadam api litium 3 kg untuk garasi EV, server room, dan ruang komersial di fasilitas bisnis.",
+      id: "Pemadam api litium 3 kg untuk garasi kendaraan listrik, server room, dan ruang komersial di fasilitas bisnis.",
       en: "3 kg lithium fire extinguisher for EV garages, server rooms, and commercial spaces in business facilities.",
     },
     image: img("/products/Proteksi/LFK_3_KG_[Font].avif"),

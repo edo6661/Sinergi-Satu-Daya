@@ -14,7 +14,7 @@ export const FloatingWhatsApp: React.FC<FloatingWhatsAppProps> = ({
 
   // Terjemahan dinamis untuk pesan default & tooltip
   const defaultMessage = lang === 'id'
-    ? 'Halo Tim SSD, saya ingin konsultasi mengenai layanan EV B2B (penjualan, rental, konsultasi, charger, atau LFK) untuk bisnis saya.'
+    ? 'Halo Tim SSD, saya ingin konsultasi mengenai layanan kendaraan listrik B2B (penjualan, rental, konsultasi, charger, atau LFK) untuk bisnis saya.'
     : 'Hello SSD Team, I would like to consult regarding B2B EV services (sales, rental, consulting, charger, or LFK) for my business.';
 
   const tooltipText = lang === 'id' ? 'Hubungi via WhatsApp' : 'Contact via WhatsApp';

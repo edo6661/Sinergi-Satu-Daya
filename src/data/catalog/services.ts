@@ -198,7 +198,7 @@ export const services: Service[] = [
       en: "Specialized fire mitigation systems for EV lithium batteries in your fleet pools and charging areas.",
     },
     longDescription: {
-      id: "Sistem proteksi keamanan kendaraan listrik berbasis Lithium Fire Killer (LFK) — pemadam api litium pertama di dunia. Dirancang khusus untuk melindungi area pangkalan armada, garasi EV, dan stasiun pengisian daya dari risiko kebakaran baterai litium.",
+      id: "Sistem proteksi keamanan kendaraan listrik berbasis Lithium Fire Killer (LFK) — pemadam api litium pertama di dunia. Dirancang khusus untuk melindungi area pangkalan armada, garasi kendaraan listrik, dan stasiun pengisian daya dari risiko kebakaran baterai litium.",
       en: "EV safety protection system based on Lithium Fire Killer (LFK) — the world's first lithium fire extinguisher. Specifically designed to protect fleet pool areas, EV garages, and charging stations from lithium battery fire risks.",
     },
     features: [
@@ -207,7 +207,7 @@ export const services: Service[] = [
         en: "Lithium Fire Killer (LFK) HARTINDO AF31",
       },
       {
-        id: "Proteksi area pangkalan armada EV",
+        id: "Proteksi area pangkalan armada kendaraan listrik",
         en: "EV fleet pool area protection",
       },
       {

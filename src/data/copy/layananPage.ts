@@ -1,7 +1,7 @@
 export const layananPageCopy = {
   id: {
     badge: "Layanan SSD",
-    title: "Solusi EV",
+    title: "Solusi Kendaraan Listrik",
     titleHighlight: "Lengkap untuk Bisnis",
     viewDetails: "Lihat Detail",
     breadcrumbHome: "Beranda",
@@ -10,7 +10,8 @@ export const layananPageCopy = {
     backToLayanan: "Kembali ke Layanan",
     allProducts: "Semua Kategori",
     productCatalog: "Katalog Kendaraan",
-    productCatalogDesc: "Jelajahi berbagai pilihan kendaraan listrik yang tersedia untuk kebutuhan bisnis Anda.",
+    productCatalogDesc:
+      "Jelajahi berbagai pilihan kendaraan listrik yang tersedia untuk kebutuhan bisnis Anda.",
   },
   en: {
     badge: "SSD Services",
@@ -23,7 +24,8 @@ export const layananPageCopy = {
     backToLayanan: "Back to Services",
     allProducts: "All Categories",
     productCatalog: "Vehicle Catalog",
-    productCatalogDesc: "Explore the range of electric vehicles available for your business needs.",
+    productCatalogDesc:
+      "Explore the range of electric vehicles available for your business needs.",
   },
 } as const;
 

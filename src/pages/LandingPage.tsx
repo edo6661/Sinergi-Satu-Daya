@@ -45,15 +45,15 @@ export const LandingPage: React.FC = () => {
         <title>{lang === 'id' ? 'SSD Mobility | Solusi Ekosistem Kendaraan Listrik B2B' : 'SSD Mobility | B2B EV Ecosystem Solutions'}</title>
 
         {/* Standard SEO */}
-        <meta name="description" content={lang === 'id' ? 'Solusi EV B2B terintegrasi dari PT Sinergi Satu Daya: penjualan kendaraan EV, rental B2B, konsultasi EV, pemasangan EV charger, & sistem fire safety LFK.' : 'Integrated B2B EV solutions from PT Sinergi Satu Daya: EV vehicle sales, B2B rental, EV consulting, EV charger installation, & LFK fire safety systems.'} />
-        <meta name="keywords" content="EV B2B, penjualan kendaraan listrik, rental mobil listrik perusahaan, konsultasi EV, charging station EV, fire safety LFK, Sinergi Satu Daya" />
+        <meta name="description" content={lang === 'id' ? 'Solusi Kendaraan Listrik B2B terintegrasi dari PT Sinergi Satu Daya: penjualan kendaraan listrik, rental B2B, konsultasi kendaraan listrik, pemasangan pengisi daya kendaraan listrik, & sistem fire safety LFK.' : 'Integrated B2B EV solutions from PT Sinergi Satu Daya: EV vehicle sales, B2B rental, EV consulting, EV charger installation, & LFK fire safety systems.'} />
+        <meta name="keywords" content="Kendaraan Listrik B2B, penjualan kendaraan listrik, rental mobil listrik perusahaan, konsultasi kendaraan listrik, stasiun pengisian daya kendaraan listrik, fire safety LFK, Sinergi Satu Daya" />
 
         {/* OpenGraph / Facebook / LinkedIn */}
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="SSD Mobility" />
         <meta property="og:url" content="https://www.sinergisatudaya.co.id" />
         <meta property="og:title" content={lang === 'id' ? 'SSD Mobility | Ekosistem Kendaraan Listrik B2B' : 'SSD Mobility | B2B Electric Vehicle Ecosystem'} />
-        <meta property="og:description" content={lang === 'id' ? 'Penjualan kendaraan EV, rental B2B, konsultasi EV, pemasangan EV charger, dan sistem fire safety LFK untuk bisnis Anda.' : 'EV vehicle sales, B2B rental, EV consulting, EV charger installation, and LFK fire safety systems for your business.'} />
+        <meta property="og:description" content={lang === 'id' ? 'Penjualan kendaraan listrik, rental B2B, konsultasi kendaraan listrik, pemasangan pengisi daya kendaraan listrik, dan sistem fire safety LFK untuk bisnis Anda.' : 'EV vehicle sales, B2B rental, EV consulting, EV charger installation, and LFK fire safety systems for your business.'} />
         <meta property="og:image" content="https://www.sinergisatudaya.co.id/og-image.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
@@ -62,7 +62,7 @@ export const LandingPage: React.FC = () => {
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={lang === 'id' ? 'SSD Mobility | Ekosistem Kendaraan Listrik B2B' : 'SSD Mobility | B2B Electric Vehicle Ecosystem'} />
-        <meta name="twitter:description" content={lang === 'id' ? 'Penjualan kendaraan EV, rental B2B, konsultasi EV, pemasangan EV charger, dan sistem fire safety LFK untuk bisnis Anda.' : 'EV vehicle sales, B2B rental, EV consulting, EV charger installation, and LFK fire safety systems for your business.'} />
+        <meta name="twitter:description" content={lang === 'id' ? 'Penjualan kendaraan listrik, rental B2B, konsultasi kendaraan listrik, pemasangan pengisi daya kendaraan listrik, dan sistem fire safety LFK untuk bisnis Anda.' : 'EV vehicle sales, B2B rental, EV consulting, EV charger installation, and LFK fire safety systems for your business.'} />
         <meta name="twitter:image" content="https://www.sinergisatudaya.co.id/og-image.jpg" />
       </Helmet>
       <SiteHeader />
@@ -122,7 +122,7 @@ export const LandingPage: React.FC = () => {
                 </div>
                 <p className="text-sm max-w-sm text-center md:text-left leading-relaxed font-medium">
                   {lang === 'id'
-                    ? 'Solusi EV terintegrasi untuk kebutuhan operasional perusahaan, mencakup kendaraan, konsultasi, manajemen operasional, dan infrastruktur pengisian daya.'
+                    ? 'Solusi Kendaraan Listrik terintegrasi untuk kebutuhan operasional perusahaan, mencakup kendaraan, konsultasi, manajemen operasional, dan infrastruktur pengisian daya.'
                     : 'Integrated B2B EV solutions: EV vehicle sales, B2B rental, EV consulting, EV charger installation, and LFK fire safety systems.'}
                 </p>
               </div>
