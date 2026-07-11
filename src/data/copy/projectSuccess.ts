@@ -1,6 +1,5 @@
 export interface ProjectSuccessItem {
   id: string;
-  category: string;
   categoryColor: string;
   title: string;
   excerpt: string;
@@ -19,41 +18,37 @@ export const projectSuccessCopy = {
     projects: [
       {
         id: "ps1",
-        category: "Armada Kendaraan Listrik",
         categoryColor: "#00529C",
-        title: "Lorem ipsum dolor sit amet consectetur",
+        title: "Pengadaan 100 Unit Kendaraan Listrik",
         excerpt:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "Satu Daya (SSD) menghadirkan solusi implementasi armada kendaraan listrik bagi kebutuhan operasional perusahaan.",
         url: "https://otomotif.kompas.com/read/2024/07/24/180100715/jusuf-hamka-borong-100-unit-mobil-listrik-wuling-di-giias-2024",
         image: "/media-highlights/kompas.jpg",
       },
       {
         id: "ps2",
-        category: "Sektor Publik",
         categoryColor: "#E31E24",
-        title: "Ut enim ad minim veniam quis nostrud",
+        title: "Dukungan Mobilitas G20",
         excerpt:
-          "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "Sinergi Satu Daya (SSD) mendukung penyediaan kendaraan listrik untuk mobilitas pada rangkaian kegiatan G20.",
         url: "https://www.suara.com/otomotif/2022/10/08/205527/wuling-air-ev-bertuliskan-g24-membawa-airlangga-hartarto-dan-puan-maharani-promosi-energi-hijau",
         image: "/media-highlights/suara.jpg",
       },
       {
         id: "ps3",
-        category: "Energi Hijau",
         categoryColor: "#DA2128",
-        title: "Duis aute irure dolor in reprehenderit",
+        title: "Solusi Mobilitas Hijau",
         excerpt:
-          "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+          "Sinergi Satu Daya (SSD) menyediakan solusi kendaraan listrik sebagai bagian dari transformasi menuju mobilitas berkelanjutan.",
         url: "https://www.tempo.co/arsip/sebanyak-37-mobil-listrik-wuling-air-ev-diberikan-ke-seluruh-ketua-dpd-golkar-269569",
         image: "/media-highlights/tempo.jpg",
       },
       {
         id: "ps4",
-        category: "Infrastruktur Tol",
         categoryColor: "#21409A",
-        title: "Excepteur sint occaecat cupidatat non",
+        title: "EV Patrol untuk Jalan Tol",
         excerpt:
-          "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "Sinergi Satu Daya (SSD) mendukung implementasi kendaraan listrik sebagai armada patroli jalan tol.",
         url: "https://oto.detik.com/mobil/d-6362433/penampakan-wuling-air-ev-yang-diborong-jusuf-hamka-untuk-mobil-patroli-tol",
         image: "/media-highlights/detik.jpg",
       },
@@ -61,49 +56,45 @@ export const projectSuccessCopy = {
   },
   en: {
     tagline: "Proven Track Record",
-    heading: "Portofolios",
+    heading: "Portfolio",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. A snapshot of SSD Mobility's project portfolio, successfully delivered alongside our strategic partners.",
     readMore: "View Details",
     cta: "Discuss Your Project",
-    projects: [ 
+    projects: [
       {
         id: "ps1",
-        category: "EV Fleet",
         categoryColor: "#00529C",
-        title: "Lorem ipsum dolor sit amet consectetur",
+        title: "Procurement of 100 Electric Vehicles",
         excerpt:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "Satu Daya (SSD) delivers electric vehicle fleet implementation solutions for corporate operational needs.",
         url: "https://otomotif.kompas.com/read/2024/07/24/180100715/jusuf-hamka-borong-100-unit-mobil-listrik-wuling-di-giias-2024",
         image: "/media-highlights/kompas.jpg",
       },
       {
         id: "ps2",
-        category: "Public Sector",
         categoryColor: "#E31E24",
-        title: "Ut enim ad minim veniam quis nostrud",
+        title: "G20 Mobility Support",
         excerpt:
-          "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "Sinergi Satu Daya (SSD) supported the provision of electric vehicles for mobility throughout the G20 events.",
         url: "https://www.suara.com/otomotif/2022/10/08/205527/wuling-air-ev-bertuliskan-g24-membawa-airlangga-hartarto-dan-puan-maharani-promosi-energi-hijau",
         image: "/media-highlights/suara.jpg",
       },
       {
         id: "ps3",
-        category: "Green Energy",
         categoryColor: "#DA2128",
-        title: "Duis aute irure dolor in reprehenderit",
+        title: "Green Mobility Solutions",
         excerpt:
-          "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+          "Sinergi Satu Daya (SSD) provides electric vehicle solutions as part of the transition toward sustainable mobility.",
         url: "https://www.tempo.co/arsip/sebanyak-37-mobil-listrik-wuling-air-ev-diberikan-ke-seluruh-ketua-dpd-golkar-269569",
         image: "/media-highlights/tempo.jpg",
       },
       {
         id: "ps4",
-        category: "Toll Infrastructure",
         categoryColor: "#21409A",
-        title: "Excepteur sint occaecat cupidatat non",
+        title: "EV Patrol for Toll Roads",
         excerpt:
-          "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "Sinergi Satu Daya (SSD) supported the deployment of electric vehicles as a toll road patrol fleet.",
         url: "https://oto.detik.com/mobil/d-6362433/penampakan-wuling-air-ev-yang-diborong-jusuf-hamka-untuk-mobil-patroli-tol",
         image: "/media-highlights/detik.jpg",
       },

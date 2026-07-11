@@ -75,12 +75,7 @@ export const ProjectSuccessSection: React.FC<ProjectSuccessSectionProps> = ({
                   loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-surface-darkest/80 via-transparent to-transparent" />
-                <div
-                  className="absolute top-4 left-4 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-wider text-white shadow-lg"
-                  style={{ backgroundColor: project.categoryColor }}
-                >
-                  {project.category}
-                </div>
+
               </div>
 
               <div className="flex flex-col flex-grow p-6 gap-2">
