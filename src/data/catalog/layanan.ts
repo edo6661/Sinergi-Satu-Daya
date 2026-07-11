@@ -174,7 +174,7 @@ export const layananProducts: LayananProduct[] = [
       id: "Motor listrik Yadea GS70 untuk pengiriman dan operasional jarak menengah.",
       en: "Yadea GS70 electric motorcycle for delivery and mid-range operations.",
     },
-    image: img("/products/Roda 2/Yadea/Mandala X.png"),
+    image: img("/products/Roda 2/Yadea/Yadea_GS70.png"),
   },
   {
     id: "yadea-gt20",
@@ -186,7 +186,7 @@ export const layananProducts: LayananProduct[] = [
       id: "Motor listrik Yadea GT20 dengan desain modern untuk armada bisnis.",
       en: "Yadea GT20 electric motorcycle with modern design for business fleets.",
     },
-    image: img("/products/Roda 2/Yadea/Patriot X.png"),
+    image: img("/products/Roda 2/Yadea/Yadea_GT20.png"),
   },
   {
     id: "yadea-velax",
@@ -198,7 +198,7 @@ export const layananProducts: LayananProduct[] = [
       id: "Motor listrik Yadea Velax untuk mobilitas perkotaan yang efisien.",
       en: "Yadea Velax electric motorcycle for efficient urban mobility.",
     },
-    image: img("/products/Roda 2/Yadea/Volta_401.png"),
+    image: img("/products/Roda 2/Yadea/Yadea_Velax.png"),
   },
   // Mobil Penumpang — MG
   {
