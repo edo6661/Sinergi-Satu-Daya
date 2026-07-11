@@ -459,7 +459,7 @@ export const layananProducts: LayananProduct[] = [
       id: "Stasiun pengisian daya AC 11 kWh untuk instalasi kantor dan fasilitas bisnis.",
       en: "AC 11 kWh charging station for office and business facility installations.",
     },
-    image: img("/category/instalasi-daya.png"),
+    image: img("/products/Charger Device/ev_power.png"),
   },
   {
     id: "dc-60-360-kwh",
