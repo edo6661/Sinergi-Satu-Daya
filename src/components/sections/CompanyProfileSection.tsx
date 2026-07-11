@@ -67,7 +67,7 @@ export const CompanyProfileSection: React.FC<CompanyProfileProps> = ({
             {/* Main Focal Image */}
             <div className="rounded-[2.5rem] overflow-hidden shadow-[0_25px_60px_rgba(0,0,0,0.12)] relative group border border-white">
               <img
-                src="/company-profile/ev-ecosystem.jpg"
+                src="/category/konsultasi_b2b.png"
                 alt="Fasilitas pool kendaraan listrik Sinergi Satu Daya"
                 className="w-full h-[480px] object-cover transition-transform duration-[1500ms] ease-out group-hover:scale-105"
                 loading="lazy"
