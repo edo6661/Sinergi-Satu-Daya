@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { useAppLanguage } from '../../hooks/useAppLanguage';
-import { HOME_SECTIONS, scrollToSectionId } from '../../utils/scrollToSection';
+import { HOME_SECTIONS, type HomeSectionId, scrollToSectionId } from '../../utils/scrollToSection';
 
 const navLinks = [
   { type: 'section' as const, id: HOME_SECTIONS.home, labelId: 'Beranda', labelEn: 'Home' },
@@ -47,7 +47,7 @@ export const SiteHeader: React.FC = () => {
 
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [landingActiveSection, setLandingActiveSection] = useState(HOME_SECTIONS.home);
+  const [landingActiveSection, setLandingActiveSection] = useState<HomeSectionId>(HOME_SECTIONS.home);
 
   useEffect(() => {
     const handleScroll = () => {
