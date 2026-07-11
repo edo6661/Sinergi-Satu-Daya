@@ -114,7 +114,7 @@ export const LandingPage: React.FC = () => {
               <div className="md:col-span-5 flex flex-col items-center md:items-start gap-4">
                 <div>
                   <img
-                    src="/logo/transparent-no-char.png"
+                    src="/logo/ssd-official.png"
                     alt="SSD Mobility"
                     className="h-14 md:h-20 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
 
