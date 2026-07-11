@@ -5,6 +5,7 @@ export const fleetCopy = {
     description:
       "Dari kendaraan roda dua hingga mobil penumpang dan armada niaga atau logistik. Tersedia untuk penjualan maupun penyewaan B2B, dirawat secara berkala, dan terintegrasi dengan infrastruktur pengisian daya SSD.",
     cta: "Cek Ketersediaan Kendaraan",
+    catalogCta: "Lihat Katalog",
     filters: {
       all: "Semua Armada",
       twoWheel: "Roda 2",
@@ -18,6 +19,7 @@ export const fleetCopy = {
     description:
       "From two-wheelers to passenger cars and commercial or logistics fleets. Available for purchase or B2B rentals, routinely maintained, and integrated with SSD's charging infrastructure.",
     cta: "Check Vehicle Availability",
+    catalogCta: "View Catalog",
     filters: {
       all: "All Fleets",
       twoWheel: "2-Wheelers",
