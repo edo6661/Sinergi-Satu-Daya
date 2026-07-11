@@ -55,10 +55,10 @@ export const projectSuccessCopy = {
     ] satisfies ProjectSuccessItem[],
   },
   en: {
-    tagline: "Proven Track Record",
+    tagline: "Proof of Execution in the Field",
     heading: "Portfolio",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. A snapshot of SSD Mobility's project portfolio, successfully delivered alongside our strategic partners.",
+      "Concrete proof of SSD's success in delivering electric vehicle solutions, fleet procurement, and mobility services that are efficient, safe, and sustainable for a wide range of industry needs.",
     readMore: "View Details",
     cta: "Discuss Your Project",
     projects: [
@@ -76,7 +76,7 @@ export const projectSuccessCopy = {
         categoryColor: "#E31E24",
         title: "G20 Mobility Support",
         excerpt:
-          "Sinergi Satu Daya (SSD) supported the provision of electric vehicles for mobility throughout the G20 events.",
+          "Sinergi Satu Daya (SSD) supports the provision of electric vehicles for mobility throughout the G20 events.",
         url: "https://www.suara.com/otomotif/2022/10/08/205527/wuling-air-ev-bertuliskan-g24-membawa-airlangga-hartarto-dan-puan-maharani-promosi-energi-hijau",
         image: "/media-highlights/suara.jpg",
       },
@@ -94,7 +94,7 @@ export const projectSuccessCopy = {
         categoryColor: "#21409A",
         title: "EV Patrol for Toll Roads",
         excerpt:
-          "Sinergi Satu Daya (SSD) supported the deployment of electric vehicles as a toll road patrol fleet.",
+          "Sinergi Satu Daya (SSD) supports the implementation of electric vehicles as a toll road patrol fleet.",
         url: "https://oto.detik.com/mobil/d-6362433/penampakan-wuling-air-ev-yang-diborong-jusuf-hamka-untuk-mobil-patroli-tol",
         image: "/media-highlights/detik.jpg",
       },

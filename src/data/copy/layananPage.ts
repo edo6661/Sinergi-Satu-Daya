@@ -25,7 +25,7 @@ export const layananPageCopy = {
     allProducts: "All Categories",
     productCatalog: "Vehicle Catalog",
     productCatalogDesc:
-      "Explore the range of electric vehicles available for your business needs.",
+      "Explore the various electric vehicle options available for your business needs.",
   },
 } as const;
 

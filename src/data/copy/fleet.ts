@@ -24,7 +24,7 @@ export const fleetCopy = {
       all: "All Fleets",
       twoWheel: "2-Wheelers",
       passenger: "Passenger Cars",
-      commercial: "Commercial / Logistics",
+      commercial: "Commercial & Logistics",
     },
   },
 } as const;

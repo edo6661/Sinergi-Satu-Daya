@@ -35,20 +35,38 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
     if (onSubmit) onSubmit(formData);
 
     const waNumber = '628110000000';
-    const message = `Halo Tim SSD, saya ingin meminta penawaran dengan detail berikut:\n
+    const serviceLabel =
+      formData.vehicleType === 'passenger'
+        ? content.form.options.passenger
+        : formData.vehicleType === 'commercial'
+          ? content.form.options.commercial
+          : formData.vehicleType === 'custom'
+            ? content.form.options.custom
+            : formData.vehicleType;
+
+    const message =
+      lang === 'id'
+        ? `Halo Tim SSD, saya ingin meminta penawaran dengan detail berikut:\n
 *Nama/Perusahaan:* ${formData.name}\n
 *No HP/WA:* ${formData.phone}\n
-*Jenis Layanan:* ${formData.vehicleType}\n
+*Jenis Layanan:* ${serviceLabel}\n
 *Jumlah Unit:* ${formData.unitCount} Unit\n
 *Lokasi:* ${formData.location}\n
-\nMohon informasi lebih lanjut. Terima kasih.`;
+\nMohon informasi lebih lanjut. Terima kasih.`
+        : `Hello SSD Team, I would like to request a quote with the following details:\n
+*Name/Company:* ${formData.name}\n
+*Phone/WhatsApp:* ${formData.phone}\n
+*Service Type:* ${serviceLabel}\n
+*Number of Units:* ${formData.unitCount} Unit(s)\n
+*Location:* ${formData.location}\n
+\nPlease provide more information. Thank you.`;
 
     window.open(`https://wa.me/${waNumber}?text=${encodeURIComponent(message)}`, '_blank');
     setTimeout(() => {
       setFormData({ name: '', phone: '', vehicleType: '', unitCount: '', location: '' });
       setIsSubmitting(false);
     }, 1000);
-  }, [formData, onSubmit]);
+  }, [formData, onSubmit, lang, content]);
 
   const inputClass = "w-full px-5 py-3.5 rounded-xl bg-surface-light border border-border-light hover:border-primary/20 focus:border-accent focus:bg-white focus:ring-4 focus:ring-accent/5 transition-all duration-300 outline-none text-content-main text-sm font-semibold placeholder:text-content-muted/40 shadow-inner";
 
@@ -122,7 +140,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                   value={formData.name}
                   onChange={handleChange}
                   className={inputClass}
-                  placeholder="Cth: Budi Santoso - PT Sinergi"
+                  placeholder={lang === 'id' ? 'Cth: Budi Santoso - PT Sinergi' : 'e.g. John Doe - Acme Corp'}
                 />
               </div>
 
@@ -149,7 +167,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                     value={formData.unitCount}
                     onChange={handleChange}
                     className={inputClass}
-                    placeholder="Cth: 10"
+                    placeholder={lang === 'id' ? 'Cth: 10' : 'e.g. 10'}
                   />
                 </div>
               </div>
@@ -179,7 +197,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                   value={formData.location}
                   onChange={handleChange}
                   className={inputClass}
-                  placeholder="Cth: Kawasan Industri Pulogadung"
+                  placeholder={lang === 'id' ? 'Cth: Kawasan Industri Pulogadung' : 'e.g. Pulogadung Industrial Estate'}
                 />
               </div>
 

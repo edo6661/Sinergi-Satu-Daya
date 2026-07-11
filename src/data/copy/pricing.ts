@@ -54,7 +54,7 @@ export const pricingCopy = {
   },
   en: {
     tagline: "Flexible Investment",
-    heading: "Service Options Scaled to Your Business",
+    heading: "Service Options According to Business Scale",
     monthly: "/ month",
     plans: [
       {
@@ -62,23 +62,26 @@ export const pricingCopy = {
         name: "B2B EV Consulting",
         price: "Contact Us",
         description:
-          "B2B EV consulting for businesses. Primary focus targets fleet transformations for the next 6 to 12 months.",
-        features: ["B2B EV Consulting", "Focus on the next 6 to 12 months"],
+          "B2B EV consulting for businesses. Primary focus on the transition toward electric vehicles.",
+        features: [
+          "B2B EV Consulting",
+          "Focus on projections for the next 6 to 12 months",
+        ],
         cta: "Select Plan",
         isPopular: false,
       },
       {
         id: "corporate",
         name: "B2B Rentals",
-        price: "From Rp 5 Million",
+        price: "Starting From Rp 5 Million",
         description:
-          "Electric vehicle leasing for business operational needs with predictable monthly costs.",
+          "Electric vehicle rental for business operational needs with predictable monthly costs.",
         features: [
-          "Choice of EV Models",
+          "Freedom to Choose EV Units",
           "Scheduled Full Maintenance",
-          "Comprehensive Insurance",
+          "Comprehensive Insurance (All-Risk)",
           "SSD Charging Network Access",
-          "Emergency Replacement Unit",
+          "Emergency Unit Replacement",
         ],
         cta: "Request Quote",
         isPopular: true,
@@ -88,13 +91,13 @@ export const pricingCopy = {
         name: "EV Sales & Infrastructure",
         price: "Custom Pricing",
         description:
-          "EV sales complete with charging station installations and LFK fire safety systems.",
+          "EV sales complete with charging station installation and fire protection systems.",
         features: [
-          "Ownership Unit Procurement",
-          "Charging Station Installations",
-          "LFK Fire Safety System",
+          "Procurement of Owned Units",
+          "Charging Station Installation",
+          "LFK Fire Protection System",
           "Driver & Technician Training",
-          "Priority Tech Support",
+          "Priority Technical Support",
         ],
         cta: "Custom Consultation",
         isPopular: false,

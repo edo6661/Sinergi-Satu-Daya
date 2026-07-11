@@ -11,9 +11,9 @@ export const heroCopy = {
     surtitle: "Trusted B2B Electric Vehicle Ecosystem",
     headline: "One-Stop Solution for Electric Mobility",
     description:
-      "Integrated B2B EV solutions for your business: EV sales, B2B rentals, EV consulting, EV charging station installations, and LFK fire safety systems.",
+      "Integrated electric vehicle solutions for corporate operational needs, covering vehicle provision, consulting, operational management, and charging infrastructure.",
     primaryCta: "Register Now",
-    secondaryCta: "Join Us (Investor)",
+    secondaryCta: "Join as an Investor",
   },
 } as const;
 

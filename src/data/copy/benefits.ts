@@ -13,8 +13,8 @@ export const benefitsCopy = {
     })),
   },
   en: {
-    tagline: "Value for Your Business",
-    heading: "SSD Ecosystem Services for Your Business",
+    tagline: "Added Value for Your Business",
+    heading: "SSD Services for Your Business Ecosystem",
     cta: "Schedule a Business Consultation",
     items: services.map((s) => ({
       slug: s.slug,

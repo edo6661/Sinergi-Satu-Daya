@@ -123,7 +123,7 @@ export const LandingPage: React.FC = () => {
                 <p className="text-sm max-w-sm text-center md:text-left leading-relaxed font-medium">
                   {lang === 'id'
                     ? 'Solusi Kendaraan Listrik terintegrasi untuk kebutuhan operasional perusahaan, mencakup kendaraan, konsultasi, manajemen operasional, dan infrastruktur pengisian daya.'
-                    : 'Integrated B2B EV solutions: EV vehicle sales, B2B rental, EV consulting, EV charger installation, and LFK fire safety systems.'}
+                    : 'Integrated electric vehicle solutions for corporate operational needs, covering vehicles, consulting, operational management, and charging infrastructure.'}
                 </p>
               </div>
 
@@ -142,7 +142,7 @@ export const LandingPage: React.FC = () => {
                 <h4 className="text-surface-white font-bold tracking-widest text-xs uppercase mb-4">
                   {lang === 'id' ? 'Daftar untuk Pembaruan' : 'Sign Up for Updates'}
                 </h4>
-                <form className="w-full max-w-sm flex flex-col gap-3" onSubmit={(e) => { e.preventDefault(); alert('Terima kasih telah mendaftar!'); }}>
+                <form className="w-full max-w-sm flex flex-col gap-3" onSubmit={(e) => { e.preventDefault(); alert(lang === 'id' ? 'Terima kasih telah mendaftar!' : 'Thank you for signing up!'); }}>
                   <input
                     type="text"
                     placeholder={lang === 'id' ? 'Masukkan nama lengkap Anda' : 'Enter your full name'}

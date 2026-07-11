@@ -75,16 +75,16 @@ export const services: Service[] = [
     },
     description: {
       id: "Menyediakan fasilitas penyewaan kendaraan listrik yang fleksibel untuk mendukung operasional bisnis Anda.",
-      en: "Providing flexible electric vehicle leasing options tailored to suit your business operations.",
+      en: "Providing flexible electric vehicle rental facilities to support your business operations.",
     },
     longDescription: {
       id: "Solusi penyewaan kendaraan listrik B2B dengan biaya bulanan yang dapat diprediksi. Armada dirawat secara berkala, dilengkapi asuransi komprehensif, akses jaringan pengisian daya SSD, dan unit pengganti darurat agar operasional bisnis Anda tidak terhenti.",
-      en: "B2B electric vehicle rental solutions with predictable monthly costs. Fleets are routinely maintained, include comprehensive insurance, SSD charging network access, and emergency replacement units so your business operations never stop.",
+      en: "B2B electric vehicle rental solutions with predictable monthly costs. Fleets are routinely maintained, include comprehensive insurance, SSD charging network access, and emergency replacement units so your business operations do not stop.",
     },
     features: [
       {
         id: "Bebas pilih unit kendaraan listrik",
-        en: "Freedom to choose EV models",
+        en: "Freedom to choose EV units",
       },
       { id: "Pemeliharaan penuh terjadwal", en: "Scheduled full maintenance" },
       {
@@ -114,11 +114,11 @@ export const services: Service[] = [
     },
     description: {
       id: "Layanan konsultasi B2B dengan fokus utama pada transformasi armada konvensional menjadi kendaraan listrik.",
-      en: "B2B EV consulting services, with a primary focus on fleet transformation over the next 6 to 12 months.",
+      en: "B2B consulting services with a primary focus on transforming conventional fleets into electric vehicles.",
     },
     longDescription: {
       id: "Tim konsultan SSD membantu perusahaan merencanakan transformasi armada menuju kendaraan listrik. Fokus utama pada proyeksi 6 hingga 12 bulan ke depan — mencakup analisis kebutuhan, perhitungan TCO, strategi transisi bertahap, dan rekomendasi infrastruktur pendukung.",
-      en: "SSD's consulting team helps companies plan fleet transformation toward electric vehicles. Primary focus on the next 6 to 12 months — covering needs analysis, TCO calculation, phased transition strategy, and supporting infrastructure recommendations.",
+      en: "SSD's consulting team helps companies plan fleet transformation toward electric vehicles. Primary focus on projections for the next 6 to 12 months — covering needs analysis, TCO calculation, phased transition strategy, and supporting infrastructure recommendations.",
     },
     features: [
       {
@@ -156,7 +156,7 @@ export const services: Service[] = [
     },
     description: {
       id: "Menyediakan peralatan dan jasa instalasi stasiun pengisian daya kendaraan listrik untuk fasilitas Anda.",
-      en: "Charging station installation at your fleet pool or warehouse, including access to the SSD public network.",
+      en: "Providing EV charging station equipment and installation services for your facilities.",
     },
     longDescription: {
       id: "SSD menyediakan peralatan dan jasa instalasi stasiun pengisian daya kendaraan listrik — mulai dari charger AC 11 kWh untuk kantor dan fasilitas bisnis, hingga charger DC cepat 60–360 kWh untuk armada dan hub charging skala besar.",
@@ -195,7 +195,7 @@ export const services: Service[] = [
     },
     description: {
       id: "Sistem mitigasi kebakaran khusus baterai litium (kendaraan listrik) di area pangkalan armada dan stasiun pengisian daya Anda.",
-      en: "Specialized fire mitigation systems for EV lithium batteries in your fleet pools and charging areas.",
+      en: "Specialized fire mitigation systems for EV lithium batteries in your fleet pool areas and charging stations.",
     },
     longDescription: {
       id: "Sistem proteksi keamanan kendaraan listrik berbasis Lithium Fire Killer (LFK) — pemadam api litium pertama di dunia. Dirancang khusus untuk melindungi area pangkalan armada, garasi kendaraan listrik, dan stasiun pengisian daya dari risiko kebakaran baterai litium.",

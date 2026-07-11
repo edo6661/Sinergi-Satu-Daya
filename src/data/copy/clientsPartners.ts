@@ -82,7 +82,7 @@ export const clientsPartnersCopy = {
     heading: "Our Clients & Partners",
     clientsLabel: "Our Valuable Customers",
     partnersLabel: "Our Partners",
-    dragHint: "Drag to explore more",
+    dragHint: "Drag to see more",
     clients: [
       {
         id: "c1",
