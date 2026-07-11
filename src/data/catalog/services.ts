@@ -61,7 +61,7 @@ export const services: Service[] = [
         en: "After-sales support and official warranty",
       },
     ],
-    image: img("/products/Passanger Roda 4/Wuling/Air EV Long Range.png"),
+    image: img("/products/ev-sales.png"),
     hasProductCatalog: true,
     catalogCategoryIds: ["two-wheel", "passenger", "commercial"],
   },
