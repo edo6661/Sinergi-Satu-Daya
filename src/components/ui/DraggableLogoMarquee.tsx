@@ -13,12 +13,12 @@ function LogoCell({ item }: { item: LogoItem }) {
   const showImage = item.image && !imgFailed;
 
   return (
-    <div className="flex-shrink-0 w-36 sm:w-44 md:w-48 h-20 sm:h-24 md:h-28 bg-surface-white rounded-xl shadow-[0_4px_24px_rgba(0,0,0,0.08)] border border-border-light flex items-center justify-center p-3 sm:p-4 select-none">
+    <div className="flex-shrink-0 w-44 sm:w-52 md:w-60 h-28 sm:h-32 md:h-36 bg-surface-white rounded-xl shadow-[0_4px_24px_rgba(0,0,0,0.08)] border border-border-light flex items-center justify-center p-2 sm:p-3 select-none">
       {showImage ? (
         <img
           src={item.image}
           alt={item.name}
-          className="max-h-full max-w-full object-contain pointer-events-none"
+          className="max-h-full max-w-full w-full h-full object-contain pointer-events-none"
           draggable={false}
           loading="lazy"
           onError={() => setImgFailed(true)}
