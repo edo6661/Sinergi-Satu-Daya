@@ -34,9 +34,12 @@
     />
     <meta name="author" content="PT Sinergi Satu Daya" />
     <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://sinergisatudaya.com/" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="SSD Mobility" />
+    <meta property="og:url" content="https://sinergisatudaya.com/" />
     <meta
       property="og:title"
       content="SSD Mobility | Ekosistem Kendaraan Listrik B2B"
@@ -45,35 +48,67 @@
       property="og:description"
       content="Solusi lengkap transisi armada kendaraan listrik untuk operasional bisnis dan logistik."
     />
-    <!-- TODO: Ganti dengan URL gambar OG yang sebenarnya -->
-    <meta property="og:image" content="/og-image.jpg" />
+    <meta
+      property="og:image"
+      content="https://sinergisatudaya.com/og-image.jpg"
+    />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:locale" content="id_ID" />
 
-    <!-- Schema.org untuk LocalBusiness / Organization -->
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="SSD Mobility | Ekosistem Kendaraan Listrik B2B"
+    />
+    <meta
+      name="twitter:description"
+      content="Solusi lengkap transisi armada kendaraan listrik untuk operasional bisnis dan logistik."
+    />
+    <meta
+      name="twitter:image"
+      content="https://sinergisatudaya.com/og-image.jpg"
+    />
+
+    <!--
+      Google Search Console: setelah verifikasi, ganti isi content=
+      dengan meta tag yang diberikan Google (HTML tag method).
+    -->
+    <!-- <meta name="google-site-verification" content="PASTE_VERIFICATION_CODE_HERE" /> -->
+
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "PT Sinergi Satu Daya",
-        "url": "https://www.sinergisatudaya.co.id",
-        "logo": "https://www.sinergisatudaya.co.id/favicon/android-chrome-512x512.png",
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "+62-811-0000-0000",
-          "contactType": "customer service",
-          "areaServed": "ID",
-          "availableLanguage": ["Indonesian", "English"]
-        },
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Gedung SSD Tower, SCBD",
-          "addressLocality": "Jakarta Selatan",
-          "addressRegion": "DKI Jakarta",
-          "addressCountry": "ID"
-        },
-        "description": "Penyedia Solusi Ekosistem Kendaraan Listrik B2B di Indonesia."
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://sinergisatudaya.com/#organization",
+            "name": "PT Sinergi Satu Daya",
+            "alternateName": "SSD Mobility",
+            "url": "https://sinergisatudaya.com/",
+            "logo": "https://sinergisatudaya.com/favicon/android-chrome-512x512.png",
+            "email": "support@sinergisatudaya.com",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Tower One, TCC Batavia, 5th Floor, Jl. K.H. Mas Mansyur, Karet Tengsin, Kec. Tanah Abang",
+              "addressLocality": "Jakarta Pusat",
+              "addressRegion": "DKI Jakarta",
+              "addressCountry": "ID"
+            },
+            "description": "Penyedia solusi ekosistem kendaraan listrik B2B di Indonesia."
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://sinergisatudaya.com/#website",
+            "url": "https://sinergisatudaya.com/",
+            "name": "SSD Mobility",
+            "publisher": {
+              "@id": "https://sinergisatudaya.com/#organization"
+            },
+            "inLanguage": "id-ID"
+          }
+        ]
       }
     </script>
 

@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, ChevronRight, Grid } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
+import { SeoHead } from '../components/seo/SeoHead';
 import { PageLayout } from '../components/layout/PageLayout';
 import { services, getServicePath } from '../data/catalog/services';
 import { layananPageCopy } from '../data/copy/layananPage';
@@ -17,21 +17,20 @@ const LayananPage = () => {
 
   return (
     <PageLayout>
-      <Helmet>
-        <title>
-          {lang === 'id'
+      <SeoHead
+        title={
+          lang === 'id'
             ? 'Layanan Kendaraan Listrik B2B | SSD Mobility'
-            : 'B2B EV Services | SSD Mobility'}
-        </title>
-        <meta
-          name="description"
-          content={
-            lang === 'id'
-              ? 'Layanan SSD: penjualan kendaraan listrik, penyewaan B2B, konsultasi kendaraan listrik, instalasi charger, dan proteksi keamanan kendaraan listrik.'
-              : 'SSD services: EV sales, B2B rentals, EV consulting, charger installation, and EV safety protection.'
-          }
-        />
-      </Helmet>
+            : 'B2B EV Services | SSD Mobility'
+        }
+        description={
+          lang === 'id'
+            ? 'Layanan SSD: penjualan kendaraan listrik, penyewaan B2B, konsultasi kendaraan listrik, instalasi charger, dan proteksi keamanan kendaraan listrik.'
+            : 'SSD services: EV sales, B2B rentals, EV consulting, charger installation, and EV safety protection.'
+        }
+        path="/layanan"
+        locale={lang === 'id' ? 'id_ID' : 'en_US'}
+      />
 
       <div className="pb-24 pt-32 bg-surface-darkest min-h-screen relative overflow-hidden">
         <div className="absolute top-0 right-0 w-full h-[500px] bg-gradient-to-b from-surface-dark via-surface-darkest to-surface-darkest z-0" />

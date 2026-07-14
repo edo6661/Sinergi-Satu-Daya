@@ -1,15 +1,17 @@
 import { useEffect, useLayoutEffect, useState } from 'react';
 import { Link, useParams, Navigate } from 'react-router-dom';
 import { ChevronRight, MessageSquare } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
+import { SeoHead } from '../components/seo/SeoHead';
 import { PageLayout } from '../components/layout/PageLayout';
 import {
   getLayananProductBySlug,
   getLayananCategoryById,
+  getLayananProductPath,
   getServiceSlugForProduct,
   type LayananProduct,
 } from '../data/catalog/layanan';
 import { getServiceBySlug } from '../data/catalog/services';
+import { absoluteUrl } from '../config/site';
 import { layananPageCopy } from '../data/copy/layananPage';
 import { useAppLanguage } from '../hooks/useAppLanguage';
 
@@ -40,8 +42,8 @@ const ProductImageGallery = ({ product, lang }: ProductImageGalleryProps) => {
                 key={view}
                 onClick={() => setActiveView(view)}
                 className={`px-3 py-1.5 rounded-lg text-[10px] font-bold uppercase tracking-wider transition-all duration-300 flex-1 cursor-pointer ${activeView === view
-                    ? 'bg-accent text-surface-darkest'
-                    : 'bg-surface-darkest border border-white/10 text-content-light/70 hover:text-surface-white'
+                  ? 'bg-accent text-surface-darkest'
+                  : 'bg-surface-darkest border border-white/10 text-content-light/70 hover:text-surface-white'
                   }`}
               >
                 {view}
@@ -79,9 +81,17 @@ const ProductDetailPage = () => {
   if (!isValid || !service || !product) {
     return (
       <PageLayout>
-        <Helmet>
-          <title>{pageTitle}</title>
-        </Helmet>
+        <SeoHead
+          title={pageTitle}
+          description={
+            lang === 'id'
+              ? 'Halaman produk tidak ditemukan.'
+              : 'Product page not found.'
+          }
+          path="/layanan"
+          noIndex
+          locale={lang === 'id' ? 'id_ID' : 'en_US'}
+        />
         <Navigate to="/layanan" replace />
       </PageLayout>
     );
@@ -96,10 +106,14 @@ const ProductDetailPage = () => {
 
   return (
     <PageLayout>
-      <Helmet>
-        <title>{pageTitle}</title>
-        <meta name="description" content={product.description[lang]} />
-      </Helmet>
+      <SeoHead
+        title={pageTitle}
+        description={product.description[lang]}
+        path={getLayananProductPath(product)}
+        image={absoluteUrl(product.image)}
+        type="product"
+        locale={lang === 'id' ? 'id_ID' : 'en_US'}
+      />
 
       <div className="pb-24 pt-32 bg-surface-darkest min-h-screen relative overflow-hidden">
         <div className="absolute top-0 right-0 w-full h-[500px] bg-gradient-to-b from-surface-dark via-surface-darkest to-surface-darkest z-0" />

@@ -1,7 +1,7 @@
 import React, { useCallback, Suspense, lazy, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useAppLanguage } from '../hooks/useAppLanguage';
+import { SeoHead } from '../components/seo/SeoHead';
 import { SiteHeader } from '../components/layout/SiteHeader';
 import { HeroSection } from '../components/sections/HeroSection';
 import { HOME_SECTIONS, scrollToSectionId, scrollToSectionWithRetry } from '../utils/scrollToSection';
@@ -41,30 +41,21 @@ export const LandingPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-slate-50 font-sans">
-      <Helmet>
-        <title>{lang === 'id' ? 'SSD Mobility | Solusi Ekosistem Kendaraan Listrik B2B' : 'SSD Mobility | B2B EV Ecosystem Solutions'}</title>
-
-        {/* Standard SEO */}
-        <meta name="description" content={lang === 'id' ? 'Solusi Kendaraan Listrik B2B terintegrasi dari PT Sinergi Satu Daya: penjualan kendaraan listrik, rental B2B, konsultasi kendaraan listrik, pemasangan pengisi daya kendaraan listrik, & sistem fire safety LFK.' : 'Integrated B2B EV solutions from PT Sinergi Satu Daya: EV sales, B2B rental, EV consulting, EV charger installation, & LFK fire safety systems.'} />
-        <meta name="keywords" content="Kendaraan Listrik B2B, penjualan kendaraan listrik, rental mobil listrik perusahaan, konsultasi kendaraan listrik, stasiun pengisian daya kendaraan listrik, fire safety LFK, Sinergi Satu Daya" />
-
-        {/* OpenGraph / Facebook / LinkedIn */}
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="SSD Mobility" />
-        <meta property="og:url" content="https://www.sinergisatudaya.co.id" />
-        <meta property="og:title" content={lang === 'id' ? 'SSD Mobility | Ekosistem Kendaraan Listrik B2B' : 'SSD Mobility | B2B Electric Vehicle Ecosystem'} />
-        <meta property="og:description" content={lang === 'id' ? 'Penjualan kendaraan listrik, rental B2B, konsultasi kendaraan listrik, pemasangan pengisi daya kendaraan listrik, dan sistem fire safety LFK untuk bisnis Anda.' : 'EV sales, B2B rental, EV consulting, EV charger installation, and LFK fire safety systems for your business.'} />
-        <meta property="og:image" content="https://www.sinergisatudaya.co.id/og-image.jpg" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta property="og:locale" content={lang === 'id' ? 'id_ID' : 'en_US'} />
-
-        {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={lang === 'id' ? 'SSD Mobility | Ekosistem Kendaraan Listrik B2B' : 'SSD Mobility | B2B Electric Vehicle Ecosystem'} />
-        <meta name="twitter:description" content={lang === 'id' ? 'Penjualan kendaraan listrik, rental B2B, konsultasi kendaraan listrik, pemasangan pengisi daya kendaraan listrik, dan sistem fire safety LFK untuk bisnis Anda.' : 'EV sales, B2B rental, EV consulting, EV charger installation, and LFK fire safety systems for your business.'} />
-        <meta name="twitter:image" content="https://www.sinergisatudaya.co.id/og-image.jpg" />
-      </Helmet>
+      <SeoHead
+        title={
+          lang === 'id'
+            ? 'SSD Mobility | Solusi Ekosistem Kendaraan Listrik B2B'
+            : 'SSD Mobility | B2B EV Ecosystem Solutions'
+        }
+        description={
+          lang === 'id'
+            ? 'Solusi Kendaraan Listrik B2B terintegrasi dari PT Sinergi Satu Daya: penjualan kendaraan listrik, rental B2B, konsultasi kendaraan listrik, pemasangan pengisi daya kendaraan listrik, & sistem fire safety LFK.'
+            : 'Integrated B2B EV solutions from PT Sinergi Satu Daya: EV sales, B2B rental, EV consulting, EV charger installation, & LFK fire safety systems.'
+        }
+        path="/"
+        keywords="Kendaraan Listrik B2B, penjualan kendaraan listrik, rental mobil listrik perusahaan, konsultasi kendaraan listrik, stasiun pengisian daya kendaraan listrik, fire safety LFK, Sinergi Satu Daya"
+        locale={lang === 'id' ? 'id_ID' : 'en_US'}
+      />
       <SiteHeader />
       <div id={HOME_SECTIONS.home}>
         <HeroSection

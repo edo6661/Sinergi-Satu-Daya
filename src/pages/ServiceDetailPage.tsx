@@ -1,9 +1,9 @@
 import { useEffect, useLayoutEffect, useState } from 'react';
 import { Link, useParams, Navigate, useSearchParams } from 'react-router-dom';
 import { ArrowRight, CheckCircle2, ChevronRight, MessageSquare } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
+import { SeoHead } from '../components/seo/SeoHead';
 import { PageLayout } from '../components/layout/PageLayout';
-import { getServiceBySlug, resolveServiceSlug } from '../data/catalog/services';
+import { getServiceBySlug, getServicePath, resolveServiceSlug } from '../data/catalog/services';
 import {
   getLayananProductPath,
   getProductsForService,
@@ -71,8 +71,8 @@ const ServiceProductCatalog = ({
           <button
             onClick={() => setActiveCategory('all')}
             className={`px-6 py-2 rounded-full text-sm font-semibold transition-all duration-300 cursor-pointer ${activeCategory === 'all'
-                ? 'bg-accent text-surface-darkest shadow-[0_0_15px_rgba(245,158,11,0.4)]'
-                : 'bg-surface-dark border border-white/10 text-content-light/70 hover:text-surface-white hover:border-white/30'
+              ? 'bg-accent text-surface-darkest shadow-[0_0_15px_rgba(245,158,11,0.4)]'
+              : 'bg-surface-dark border border-white/10 text-content-light/70 hover:text-surface-white hover:border-white/30'
               }`}
           >
             {content.allProducts}
@@ -82,8 +82,8 @@ const ServiceProductCatalog = ({
               key={cat.id}
               onClick={() => setActiveCategory(cat.id)}
               className={`px-6 py-2 rounded-full text-sm font-semibold transition-all duration-300 cursor-pointer ${activeCategory === cat.id
-                  ? 'bg-accent text-surface-darkest shadow-[0_0_15px_rgba(245,158,11,0.4)]'
-                  : 'bg-surface-dark border border-white/10 text-content-light/70 hover:text-surface-white hover:border-white/30'
+                ? 'bg-accent text-surface-darkest shadow-[0_0_15px_rgba(245,158,11,0.4)]'
+                : 'bg-surface-dark border border-white/10 text-content-light/70 hover:text-surface-white hover:border-white/30'
                 }`}
             >
               {cat.name[lang]}
@@ -185,11 +185,19 @@ const ServiceDetailPage = () => {
   if (!service) {
     return (
       <PageLayout>
-        <Helmet>
-          <title>
-            {lang === 'id' ? 'Layanan tidak ditemukan' : 'Service not found'} | SSD Mobility
-          </title>
-        </Helmet>
+        <SeoHead
+          title={
+            `${lang === 'id' ? 'Layanan tidak ditemukan' : 'Service not found'} | SSD Mobility`
+          }
+          description={
+            lang === 'id'
+              ? 'Halaman layanan tidak ditemukan.'
+              : 'Service page not found.'
+          }
+          path="/layanan"
+          noIndex
+          locale={lang === 'id' ? 'id_ID' : 'en_US'}
+        />
         <Navigate to="/layanan" replace />
       </PageLayout>
     );
@@ -214,10 +222,13 @@ const ServiceDetailPage = () => {
 
   return (
     <PageLayout>
-      <Helmet>
-        <title>{pageTitle}</title>
-        <meta name="description" content={service.longDescription[lang]} />
-      </Helmet>
+      <SeoHead
+        title={pageTitle}
+        description={service.longDescription[lang]}
+        path={getServicePath(service)}
+        image={service.image}
+        locale={lang === 'id' ? 'id_ID' : 'en_US'}
+      />
 
       <div className="pb-24 pt-32 bg-surface-darkest min-h-screen relative overflow-hidden">
         <div className="absolute top-0 right-0 w-full h-[500px] bg-gradient-to-b from-surface-dark via-surface-darkest to-surface-darkest z-0" />
