@@ -158,7 +158,7 @@ const ProductDetailPage = () => {
             <ProductImageGallery key={productSlug} product={product} lang={lang} />
 
             <div>
-              <p className="text-content-light/80 font-light leading-relaxed text-lg mb-10">
+              <p className="text-content-light/80 font-light leading-relaxed text-lg mb-10 whitespace-pre-line">
                 {product.description[lang]}
               </p>
 

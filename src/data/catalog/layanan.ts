@@ -25,6 +25,69 @@ export interface LayananProduct {
 
 const img = (path: string) => encodeURI(path);
 
+const makaCavalryDescription = {
+  id: `Motor listrik tangguh yang dirancang khusus untuk efisiensi operasional usaha Anda dan kelestarian lingkungan. Memadukan performa dinamo 12 HP dengan torsi melimpah 251 Nm, motor ini siap melibas tanjakan hingga 30° dengan akselerasi yang responsif. Ditenagai oleh baterai tanam Intercellar™ berkapasitas 4 kWh, MAKA Cavalry mampu menempuh jarak ekstra jauh hingga 160 km dalam sekali pengisian penuh, serta mendukung opsi fast charging yang super cepat.
+
+Keandalan harian Anda semakin terjamin berkat sertifikasi IP67 yang tahan debu dan aman menerjang genangan air hingga kedalaman 60 cm. Dilengkapi dengan kapasitas bagasi luas 20 Liter dan USB charging port terintegrasi, MAKA Cavalry bukan sekadar kendaraan operasional, melainkan mitra bisnis modern yang siap menekan biaya pengeluaran dan meningkatkan produktivitas usaha Anda setiap hari.`,
+  en: `A rugged electric motorcycle specially designed to improve your business's operational efficiency while supporting environmental sustainability. Combining a 12 HP motor with an ample 251 Nm of torque, it can handle inclines of up to 30° with responsive acceleration. Powered by a built-in 4 kWh Intercellar™ battery, the MAKA Cavalry can travel up to 160 km on a full charge and supports ultra-fast charging.
+
+Daily reliability is further assured by IP67 certification, providing dust protection and safe performance through water puddles up to 60 cm deep. With a spacious 20-liter storage compartment and an integrated USB charging port, the MAKA Cavalry is more than an operational vehicle—it is a modern business partner ready to reduce operating costs and improve your business productivity every day.`,
+};
+
+const volta401Description = {
+  id: `Volta 401 hadir sebagai solusi motor listrik yang andal, ekonomis, dan ramah lingkungan untuk mendukung mobilitas bisnis harian Anda. Dibekali daya motor maksimum 1500 Watt hingga 1900 Watt, skutik listrik ini mampu melaju dengan kecepatan maksimum 60 km/jam dan memiliki daya angkut tangguh hingga 150 kg - 200 kg.
+
+Keunggulan utama Volta 401 terletak pada fitur Double Battery Slot yang menggunakan baterai Lithium tahan panas (LiFePO4). Dengan satu baterai, motor ini dapat menempuh jarak 60 km, dan dapat ditingkatkan hingga 120 km menggunakan dua baterai sekaligus untuk produktivitas operasional tanpa henti. Didukung dengan Sistem Ganti Baterai (SGB) yang praktis, fitur modern seperti LCD Digital Speedometer, USB Charging Port, serta gigi mundur (Reverse Function), Volta 401 siap menjadi mitra bisnis terbaik untuk menekan biaya pengeluaran harian usaha Anda secara signifikan.`,
+  en: `The Volta 401 is a reliable, economical, and eco-friendly electric motorcycle designed to support your daily business mobility. With a maximum motor output of 1,500 to 1,900 Watts, this electric scooter can reach speeds of up to 60 km/h and carry a substantial load of 150–200 kg.
+
+The Volta 401's key advantage is its Double Battery Slot, which uses heat-resistant Lithium (LiFePO4) batteries. One battery provides a range of 60 km, extendable to 120 km with two batteries for uninterrupted operational productivity. Supported by a practical Battery Swap System (SGB), an LCD Digital Speedometer, USB Charging Port, and Reverse Function, the Volta 401 is ready to become your ideal business partner for significantly reducing daily operating expenses.`,
+};
+
+const voltaMandalaXDescription = {
+  id: `Volta Mandala X adalah perpaduan sempurna antara desain skuter klasik yang timeless dan teknologi masa depan yang ramah lingkungan. Dikembangkan untuk mobilitas urban dan bisnis yang ingin tampil beda, motor listrik ini dibekali dengan daya maksimum (peak power) hingga 4000 Watt yang responsif. Berkat fitur inovatif Double Slot Battery berkapasitas 73.6V 27Ah SGB LiFePO4 (Lithium tahan panas), Volta Mandala X siap menemani perjalanan Anda dengan jarak tempuh impresif hingga 150 km serta estimasi kecepatan maksimum mencapai 70 km/jam.
+
+Tidak hanya bertenaga, kenyamanan dan keamanan berkendara Anda juga didukung oleh sistem pengereman Combi Brake System (CBS) untuk meminimalkan risiko slip, kapasitas daya angkut tangguh hingga 150 kg, serta fitur modern seperti penguncian pintar via NFC Lock. Volta Mandala X adalah pilihan cerdas untuk efisiensi biaya operasional harian Anda tanpa harus mengorbankan gaya bergaya premium.`,
+  en: `The Volta Mandala X is a perfect blend of timeless classic scooter design and eco-friendly future technology. Developed for urban mobility and businesses that want to stand out, this electric motorcycle delivers responsive peak power of up to 4,000 Watts. With an innovative Double Slot Battery featuring a 73.6V 27Ah SGB LiFePO4 heat-resistant Lithium battery, the Volta Mandala X offers an impressive range of up to 150 km and an estimated top speed of 70 km/h.
+
+Beyond its power, riding comfort and safety are supported by a Combi Brake System (CBS) to minimize the risk of slipping, a robust load capacity of up to 150 kg, and modern features such as NFC Lock smart locking. The Volta Mandala X is a smart choice for improving daily operating cost efficiency without compromising on premium style.`,
+};
+
+const voltaPatriotXDescription = {
+  id: `Volta Patriot X hadir sebagai jawaban bagi Anda yang menginginkan performa tangguh, kenyamanan maksimal, dan tampilan sporty yang modern. Dirancang untuk mobilitas urban maupun kebutuhan operasional yang dinamis, motor listrik premium ini dibekali dengan daya maksimum (peak power) hingga 4000 Watt. Didukung oleh teknologi Double Slot Battery berkapasitas 73.6V 27Ah LiFePO4 (Lithium tahan panas), Volta Patriot X siap melaju dengan kecepatan maksimum hingga 70 km/jam dan mampu menempuh jarak ekstra jauh hingga 150 km saat kedua slot baterai terisi penuh.
+
+Kenyamanan berkendara di berbagai medan jalan dipastikan oleh suspensi yang empuk, daya angkut kuat hingga 150 kg, serta efisiensi pengisian daya dengan opsi sistem ganti baterai (SGB) yang praktis. Dilengkapi dengan fitur keamanan canggih berbasis NFC Lock dan sistem pengereman yang pakem, Volta Patriot X adalah pilihan investasi cerdas untuk operasional bisnis yang super efisien tanpa kehilangan kesan gagah dan profesional di jalanan.`,
+  en: `The Volta Patriot X is the answer for those seeking strong performance, maximum comfort, and a modern sporty look. Designed for urban mobility and dynamic operational needs, this premium electric motorcycle delivers peak power of up to 4,000 Watts. Supported by Double Slot Battery technology with a 73.6V 27Ah LiFePO4 heat-resistant Lithium battery, the Volta Patriot X can reach speeds of up to 70 km/h and travel up to 150 km when both battery slots are fully charged.
+
+Comfort across a variety of roads is assured by soft suspension, a strong load capacity of up to 150 kg, and efficient charging with a practical Battery Swap System (SGB) option. Equipped with advanced NFC Lock security and responsive braking, the Volta Patriot X is a smart investment for highly efficient business operations without losing its bold, professional presence on the road.`,
+};
+
+const yadeaGs70Description = {
+  id: `Yadea GS70 hadir membawa revolusi mobilitas urban lewat bahasa desain Mech-Bionic yang agresif, kokoh, dan modern. Mengusung semangat kendaraan komuter masa depan, motor listrik premium ini dibekali dinamo hub-motor bertenaga nominal 1.500 Watt dengan daya puncak hingga 2.800 Watt dan torsi instan melimpah 105 Nm. Didukung oleh baterai tangguh 72V 30Ah LFP (Lithium Ferro Phosphate), Yadea GS70 mampu melaju dengan kecepatan maksimum hingga 65 km/jam dan menempuh jarak ekstra jauh hingga 100+ km dalam sekali pengisian penuh.
+
+Kenyamanan berkendara Anda semakin naik kelas berkat integrasi fitur keamanan digital mutakhir seperti sistem penguncian instan tanpa kunci fisik (One-Second Smart Unlock), GPS Tracking, hingga kontrol traksi (TCS). Dilengkapi pula dengan lampu depan LED ultra-wide 120 derajat bersensor gelap otomatis serta sasis baja berkekuatan tinggi, Yadea GS70 adalah kombinasi sempurna antara performa stabil, efisiensi operasional tinggi, dan gaya hidup cerdas yang siap diandalkan setiap hari.`,
+  en: `The Yadea GS70 brings a revolution in urban mobility through its aggressive, sturdy, and modern Mech-Bionic design language. Built in the spirit of the commuter vehicle of the future, this premium electric motorcycle features a hub motor with a nominal output of 1,500 Watts, peak power of up to 2,800 Watts, and abundant instant torque of 105 Nm. Powered by a robust 72V 30Ah LFP (Lithium Ferro Phosphate) battery, the Yadea GS70 can reach speeds of up to 65 km/h and travel over 100 km on a full charge.
+
+Riding comfort is elevated by advanced digital safety features such as keyless One-Second Smart Unlock, GPS Tracking, and Traction Control (TCS). It also features an ultra-wide 120-degree LED headlamp with an automatic darkness sensor and a high-strength steel chassis. The Yadea GS70 is the perfect combination of stable performance, high operational efficiency, and a smart lifestyle you can rely on every day.`,
+};
+
+const yadeaGt20Description = {
+  id: `Yadea GT20 hadir sebagai skuter listrik bergaya sporty dan modern yang dirancang khusus untuk menghadapi dinamika serta cuaca ekstrem di perkotaan. Dibekali dengan Wheel Hub Motor bertenaga 1.500 Watt dengan daya puncak instan hingga 2.700 Watt, motor ini menawarkan akselerasi awal yang responsif, kecepatan maksimal 51 km/jam, serta torsi melimpah 135 Nm yang andal melibas tanjakan. Keunggulan utamanya terletak pada penggunaan teknologi Baterai Graphene TTFAR (72V 23Ah) yang memiliki daya tahan hingga 3 kali lebih lama dibanding baterai biasa dan mampu menempuh jarak hingga 80 km dalam sekali pengisian penuh.
+
+Ketangguhan Yadea GT20 semakin teruji berkat komponen utama yang dirancang kedap air, membuatnya aman menerjang genangan air hingga kedalaman 300 mm. Kenyamanan harian Anda didukung oleh ruang kaki (pedal) yang luas sepanjang 350 mm, lampu utama LED yang terang, serta panel instan Digital Tub yang minimalis. Ditambah fitur keamanan pintar seperti Bluetooth dan App Remote Unlock, Yadea GT20 adalah kendaraan operasional yang praktis, trendi, dan sangat efisien untuk jangka panjang.`,
+  en: `The Yadea GT20 is a sporty, modern electric scooter designed specifically to handle the dynamics and extreme weather of urban environments. Equipped with a 1,500-Watt Wheel Hub Motor and instant peak power of up to 2,700 Watts, it offers responsive initial acceleration, a top speed of 51 km/h, and ample 135 Nm torque for confidently handling inclines. Its key advantage is TTFAR Graphene Battery technology (72V 23Ah), which lasts up to three times longer than standard batteries and provides a range of up to 80 km on a full charge.
+
+The Yadea GT20's durability is reinforced by waterproof main components, allowing it to safely pass through puddles up to 300 mm deep. Daily comfort is supported by a spacious 350 mm footboard, bright LED headlights, and an instant Digital Tub panel with a minimalist design. With smart security features such as Bluetooth and App Remote Unlock, the Yadea GT20 is a practical, trendy, and highly efficient operational vehicle for the long term.`,
+};
+
+const yadeaVelaxDescription = {
+  id: `Yadea Velax hadir menetapkan standar baru mobilitas urban melalui perpaduan desain modern yang lebar, posisi jok ergonomis yang lega, serta deck kaki luas yang sangat fungsional untuk membawa barang harian. Skutik listrik premium ini ditenagai dinamo tangguh berkapasitas 2000 Watt hingga 3200 Watt yang responsif, serta didukung oleh fitur keselamatan canggih bersertifikasi IPX7 Waterproof untuk ketenangan berkendara saat musim hujan atau menerjang genangan air.
+
+Daya jelajah Yadea Velax menjadi salah satu yang terbaik di kelasnya, mampu menempuh jarak impresif mulai dari 90 km hingga 130 km dalam sekali pengisian penuh berkat efisiensi opsi baterai berkualitas tinggi (tersedia varian Graphene, Lithium, hingga teknologi Fast Charging). Kenyamanan berkendara harian Anda semakin disempurnakan oleh ekosistem digital mutakhir yang terintegrasi langsung ke ponsel pintar Anda—mulai dari fitur penguncian praktis (Bluetooth & App Remote Unlock), pelacakan posisi via GPS Tracking, hingga sistem keamanan antikaling Motion Detection Alert. Yadea Velax adalah investasi cerdas untuk gaya hidup modern dan operasional bisnis yang menginginkan kemewahan sekaligus efisiensi maksimal.`,
+  en: `The Yadea Velax sets a new standard for urban mobility through its combination of a wide modern design, a spacious ergonomic seat position, and a broad, highly functional footboard for carrying daily goods. This premium electric scooter is powered by a responsive 2,000- to 3,200-Watt motor and supported by advanced safety features with IPX7 Waterproof certification for peace of mind during rainy seasons or when passing through puddles.
+
+The Yadea Velax offers one of the best ranges in its class, traveling an impressive 90 to 130 km on a full charge through its efficient, high-quality battery options, including Graphene, Lithium, and Fast Charging variants. Daily riding comfort is further enhanced by an advanced digital ecosystem integrated with your smartphone, including convenient locking through Bluetooth and App Remote Unlock, GPS Tracking, and an anti-theft Motion Detection Alert system. The Yadea Velax is a smart investment for modern lifestyles and business operations seeking both luxury and maximum efficiency.`,
+};
+
 export const layananCategories: LayananCategory[] = [
   {
     id: "two-wheel",
@@ -90,10 +153,7 @@ export const layananProducts: LayananProduct[] = [
     categoryId: "two-wheel",
     brand: "MAKA",
     title: { id: "MAKA Cavalry — Ocean Blue", en: "MAKA Cavalry — Ocean Blue" },
-    description: {
-      id: "Motor listrik MAKA Cavalry untuk operasional bisnis yang efisien dan ramah lingkungan.",
-      en: "MAKA Cavalry electric motorcycle for efficient and eco-friendly business operations.",
-    },
+    description: makaCavalryDescription,
     image: img("/products/Roda 2/MAKA/Ocean-Blue-Maka-Cavalry.webp"),
   },
   {
@@ -105,10 +165,7 @@ export const layananProducts: LayananProduct[] = [
       id: "MAKA Cavalry — Royal White",
       en: "MAKA Cavalry — Royal White",
     },
-    description: {
-      id: "Motor listrik MAKA Cavalry untuk operasional bisnis yang efisien dan ramah lingkungan.",
-      en: "MAKA Cavalry electric motorcycle for efficient and eco-friendly business operations.",
-    },
+    description: makaCavalryDescription,
     image: img("/products/Roda 2/MAKA/Royal-White-Maka-Cavalry.webp"),
   },
   {
@@ -120,10 +177,7 @@ export const layananProducts: LayananProduct[] = [
       id: "MAKA Cavalry — Victory Red",
       en: "MAKA Cavalry — Victory Red",
     },
-    description: {
-      id: "Motor listrik MAKA Cavalry untuk operasional bisnis yang efisien dan ramah lingkungan.",
-      en: "MAKA Cavalry electric motorcycle for efficient and eco-friendly business operations.",
-    },
+    description: makaCavalryDescription,
     image: img("/products/Roda 2/MAKA/Victory-Red-Maka-Cavalry.webp"),
   },
   // Roda 2 — Volta
@@ -133,10 +187,7 @@ export const layananProducts: LayananProduct[] = [
     categoryId: "two-wheel",
     brand: "Volta",
     title: { id: "Volta Mandala X", en: "Volta Mandala X" },
-    description: {
-      id: "Motor listrik Volta Mandala X untuk mobilitas perkotaan dan pengiriman.",
-      en: "Volta Mandala X electric motorcycle for urban mobility and delivery.",
-    },
+    description: voltaMandalaXDescription,
     image: img("/products/Roda 2/Volta/Mandala X.jpg"),
   },
   {
@@ -145,10 +196,7 @@ export const layananProducts: LayananProduct[] = [
     categoryId: "two-wheel",
     brand: "Volta",
     title: { id: "Volta Patriot X", en: "Volta Patriot X" },
-    description: {
-      id: "Motor listrik Volta Patriot X dengan performa tangguh untuk operasional harian.",
-      en: "Volta Patriot X electric motorcycle with robust performance for daily operations.",
-    },
+    description: voltaPatriotXDescription,
     image: img("/products/Roda 2/Volta/Patriot X.jpg"),
   },
   {
@@ -157,10 +205,7 @@ export const layananProducts: LayananProduct[] = [
     categoryId: "two-wheel",
     brand: "Volta",
     title: { id: "Volta 401", en: "Volta 401" },
-    description: {
-      id: "Motor listrik Volta 401 untuk kebutuhan mobilitas bisnis skala menengah.",
-      en: "Volta 401 electric motorcycle for mid-scale business mobility needs.",
-    },
+    description: volta401Description,
     image: img("/products/Roda 2/Volta/Volta_401.png"),
   },
   // Roda 2 — Yadea
@@ -170,10 +215,7 @@ export const layananProducts: LayananProduct[] = [
     categoryId: "two-wheel",
     brand: "Yadea",
     title: { id: "Yadea GS70", en: "Yadea GS70" },
-    description: {
-      id: "Motor listrik Yadea GS70 untuk pengiriman dan operasional jarak menengah.",
-      en: "Yadea GS70 electric motorcycle for delivery and mid-range operations.",
-    },
+    description: yadeaGs70Description,
     image: img("/products/Roda 2/Yadea/Yadea_GS70.png"),
   },
   {
@@ -182,10 +224,7 @@ export const layananProducts: LayananProduct[] = [
     categoryId: "two-wheel",
     brand: "Yadea",
     title: { id: "Yadea GT20", en: "Yadea GT20" },
-    description: {
-      id: "Motor listrik Yadea GT20 dengan desain modern untuk armada bisnis.",
-      en: "Yadea GT20 electric motorcycle with modern design for business fleets.",
-    },
+    description: yadeaGt20Description,
     image: img("/products/Roda 2/Yadea/Yadea_GT20.png"),
   },
   {
@@ -194,10 +233,7 @@ export const layananProducts: LayananProduct[] = [
     categoryId: "two-wheel",
     brand: "Yadea",
     title: { id: "Yadea Velax", en: "Yadea Velax" },
-    description: {
-      id: "Motor listrik Yadea Velax untuk mobilitas perkotaan yang efisien.",
-      en: "Yadea Velax electric motorcycle for efficient urban mobility.",
-    },
+    description: yadeaVelaxDescription,
     image: img("/products/Roda 2/Yadea/Yadea_Velax.png"),
   },
   // Mobil Penumpang — MG
